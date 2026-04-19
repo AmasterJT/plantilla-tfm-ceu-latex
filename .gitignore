@@ -27,6 +27,7 @@
 *.acr
 *.alg
 *.run.xml
+*.synctex(busy)
 
 # Generated PDF and preview files
 # NOTE: keep PDF output in repo
