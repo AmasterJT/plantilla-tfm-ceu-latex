@@ -62,6 +62,8 @@
 
 % --- Estilo secciones ---
 \definecolor{AzulTFG}{RGB}{0, 148, 224}
+\definecolor{blue}{RGB}{69, 85, 107}
+\definecolor{bluelink}{RGB}{5, 99, 193}
 \usepackage{titlesec}
 
 % --- Interlineado entre párrafos y sangría ---
@@ -216,6 +218,11 @@
   }%
 }
 
+
+\newcommand{\enlace}[2]{%
+    \href{#1}{\color{bluelink}\uline{#2}}%
+}
+
 \renewcommand{\headrulewidth}{0pt}
 
 % --- Glosario ---
@@ -312,16 +319,11 @@
 \include{Cuerpo/04_Analisis_del_sistema}
 
 % 5 Diseño del sistema
-\include{Cuerpo/05_Diseno_del_sistema}
+\include{Cuerpo/05_validacion_del_sistema}
 
 % 6 Implementación
-\include{Cuerpo/06_Implementacion}
+\include{Cuerpo/06_conclusiones_y_lineas_futuras}
 
-% 7 Resultados y discusión
-\include{Cuerpo/07_Resultados_y_discusion}
-
-% 8 Conclusiones y trabajos futuros
-\include{Cuerpo/08_Conclusiones_y_trabajos_futuros}
 
 
 

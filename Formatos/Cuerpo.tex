@@ -27,14 +27,20 @@
   {10pt}                 % Espacio inferior (ajustado para que no pegue al párrafo)
 
 %Estilo subsección
-\titleformat{\subsection}{\normalfont\fontsize{15.5pt}{20}\bfseries}{\thesubsection}{0.3em}{}
+\titleformat{\subsection}{\normalfont\fontsize{16pt}{20}\bfseries}{\thesubsection}{0.3em}{}
 \titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
 %Estilo subsubsección
 \titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
-\titleformat{\subsubsection}{\normalfont\fontsize{15.5pt}{20}\itshape}{\thesubsubsection}{0.3em}{}
 
-%Espacio debaijo de captions
+% Formato corregido: Negrita (\bfseries) y sin cursiva
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{14pt}{20}\selectfont\bfseries} % <--- Aquí los cambios
+  {\thesubsubsection}
+  {0.3em}
+  {}
+
+%Espacio debajo de captions
 \setlength{\belowcaptionskip}{0pt}
 %Espacio arriba de captions
 \setlength{\abovecaptionskip}{2pt}
