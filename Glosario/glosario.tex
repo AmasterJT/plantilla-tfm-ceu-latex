@@ -1,3 +1,125 @@
+% =========================================================
+% glosario.tex
+% Definición y generación del glosario y siglas del TFM
+% =========================================================
+%
+% Este fichero contiene:
+%   - Definiciones de términos (glosario)
+%   - Definiciones de siglas (acrónimos)
+%   - Estructura de impresión del glosario en el documento
+%
+% Se utiliza junto con el paquete:
+%   \usepackage[acronym]{glossaries}
+%
+% ---------------------------------------------------------
+% 📌 ¿Cómo usar este fichero?
+% ---------------------------------------------------------
+%
+% 1. Define nuevos términos con:
+%
+%    \newglossaryentry{clave}{
+%        name={Nombre visible},
+%        description={Definición del término}
+%    }
+%
+% 2. Define nuevas siglas con:
+%
+%    \newacronym{clave}{SIGLA}{Nombre completo}
+%
+% 3. Usa los términos en el documento:
+%
+%    \gls{clave}        → muestra el término
+%
+% 4. Usa las siglas:
+%
+%    \acrshort{clave}   → forma corta (API)
+%    \acrlong{clave}    → forma larga (Interfaz de Programación de Aplicaciones)
+%
+% 5. Genera el glosario automáticamente con:
+%
+%    \crearglosario
+%
+% ---------------------------------------------------------
+% 📖 Tipos de entradas
+% ---------------------------------------------------------
+%
+% 🔤 Términos (glosario)
+%
+% Ejemplo:
+%   \newglossaryentry{backend}{
+%       name={Backend},
+%       description={Sistema de servidores y lógica}
+%   }
+%
+% 🔠 Siglas (acrónimos)
+%
+% Ejemplo:
+%   \newacronym{api}{API}{Interfaz de Programación de Aplicaciones}
+%
+% También puedes definir plural:
+%
+%   \newacronym[
+%     plural=SIGLAS,
+%     longplural={Nombre completo en plural}
+%   ]{clave}{SIGLA}{Nombre completo}
+%
+% ---------------------------------------------------------
+% ⚙️ Impresión del glosario
+% ---------------------------------------------------------
+%
+% Este fichero incluye dos secciones:
+%
+% 1. Glosario de siglas
+%    - Muestra únicamente acrónimos
+%
+% 2. Definiciones
+%    - Muestra términos definidos con \newglossaryentry
+%
+% Ambas secciones se insertan mediante:
+%
+%   \input{Glosario/glosario}
+%
+% y son llamadas automáticamente desde:
+%
+%   \crearglosario
+%
+% ---------------------------------------------------------
+% ⚠️ Reglas importantes
+% ---------------------------------------------------------
+%
+% - Cada entrada debe tener una clave única:
+%     ❌ backend duplicado
+%     ✔ backend, backend_api, backend_sistema
+%
+% - No usar espacios en las claves:
+%     ❌ "base de datos"
+%     ✔ base_datos
+%
+% - Usa nombres descriptivos:
+%     ✔ resultset
+%     ❌ r1
+%
+% - Evita repetir definiciones en el texto:
+%     usa siempre \gls{}
+%
+% ---------------------------------------------------------
+% 💡 Notas
+% ---------------------------------------------------------
+%
+% - El comando \glsaddall se usa para incluir todos los términos
+%   aunque no aparezcan en el texto
+%
+% - Puedes eliminarlo si solo quieres mostrar términos usados
+%
+% - El formato visual está controlado por la plantilla
+%
+% =========================================================
+
+% Ejemplos de entradas de glosario y siglas. Reemplaza o añade las tuyas propias.
+
+
+
+
 % =========================
 % Glosario de términos
 % =========================

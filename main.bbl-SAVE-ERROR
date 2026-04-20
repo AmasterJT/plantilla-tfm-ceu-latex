@@ -1,0 +1,180 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{somerville_software_engineering}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=4d3689aecb9d29567eb379b522158e4d}{%
+           family={Somerville},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Education}%
+      }
+      \strng{namehash}{4d3689aecb9d29567eb379b522158e4d}
+      \strng{fullhash}{4d3689aecb9d29567eb379b522158e4d}
+      \strng{fullhashraw}{4d3689aecb9d29567eb379b522158e4d}
+      \strng{bibnamehash}{4d3689aecb9d29567eb379b522158e4d}
+      \strng{authorbibnamehash}{4d3689aecb9d29567eb379b522158e4d}
+      \strng{authornamehash}{4d3689aecb9d29567eb379b522158e4d}
+      \strng{authorfullhash}{4d3689aecb9d29567eb379b522158e4d}
+      \strng{authorfullhashraw}{4d3689aecb9d29567eb379b522158e4d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{10}
+      \field{title}{Software Engineering}
+      \field{year}{2015}
+    \endentry
+    \entry{fielding_rest}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=87dbbd44b3977c28b71d826a931add3e}{%
+           family={Fielding},
+           familyi={F\bibinitperiod},
+           given={Roy\bibnamedelima Thomas},
+           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of California}%
+      }
+      \strng{namehash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{fullhash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{fullhashraw}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{bibnamehash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{authorbibnamehash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{authornamehash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{authorfullhash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{authorfullhashraw}{87dbbd44b3977c28b71d826a931add3e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Architectural Styles and the Design of Network-based Software Architectures}
+      \field{type}{phdthesis}
+      \field{year}{2000}
+    \endentry
+    \entry{redes_api_rest}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b2eebcd7af6421c9091322207d48cf59}{%
+           family={{Iniciativa Aporta}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{b2eebcd7af6421c9091322207d48cf59}
+      \strng{fullhash}{b2eebcd7af6421c9091322207d48cf59}
+      \strng{fullhashraw}{b2eebcd7af6421c9091322207d48cf59}
+      \strng{bibnamehash}{b2eebcd7af6421c9091322207d48cf59}
+      \strng{authorbibnamehash}{b2eebcd7af6421c9091322207d48cf59}
+      \strng{authornamehash}{b2eebcd7af6421c9091322207d48cf59}
+      \strng{authorfullhash}{b2eebcd7af6421c9091322207d48cf59}
+      \strng{authorfullhashraw}{b2eebcd7af6421c9091322207d48cf59}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Gobierno de España}
+      \field{title}{Buenas prácticas en el diseño de APIs y linked data}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://datos.gob.es/elearning/Unidades_Didacticas/Unidad_8/contenidos/descargas/unidad_imprimible.pdf
+      \endverb
+      \verb{url}
+      \verb https://datos.gob.es/elearning/Unidades_Didacticas/Unidad_8/contenidos/descargas/unidad_imprimible.pdf
+      \endverb
+    \endentry
+    \entry{mysql_documentation}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=30162ed78b6c10f731411f2fc440c24f}{%
+           family={{Oracle}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{fullhash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{fullhashraw}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{bibnamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorbibnamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authornamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorfullhash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorfullhashraw}{30162ed78b6c10f731411f2fc440c24f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MySQL 8.0 Reference Manual}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dev.mysql.com/doc/
+      \endverb
+      \verb{url}
+      \verb https://dev.mysql.com/doc/
+      \endverb
+    \endentry
+    \entry{wms_overview}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=65ba4709c8e9c1df90198645974e0501}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Jinxiang},
+           giveni={J\bibinitperiod}}}%
+        {{hash=92119012462811f283b7b823141d08f8}{%
+           family={Goetschalckx},
+           familyi={G\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=216508c1f7749fc4d3d3cf5513a9b53f}{%
+           family={McGinnis},
+           familyi={M\bibinitperiod},
+           given={Leon},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{547e5ee068d758ced75a8e2ad99ab68a}
+      \strng{fullhash}{4c9a6d392fcdd5a88c957cdf66fcadcc}
+      \strng{fullhashraw}{4c9a6d392fcdd5a88c957cdf66fcadcc}
+      \strng{bibnamehash}{4c9a6d392fcdd5a88c957cdf66fcadcc}
+      \strng{authorbibnamehash}{4c9a6d392fcdd5a88c957cdf66fcadcc}
+      \strng{authornamehash}{547e5ee068d758ced75a8e2ad99ab68a}
+      \strng{authorfullhash}{4c9a6d392fcdd5a88c957cdf66fcadcc}
+      \strng{authorfullhashraw}{4c9a6d392fcdd5a88c957cdf66fcadcc}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Journal of Operational Research}
+      \field{number}{3}
+      \field{title}{Research on warehouse design and performance evaluation: A comprehensive review}
+      \field{volume}{203}
+      \field{year}{2010}
+      \field{pages}{539\bibrangedash 549}
+      \range{pages}{11}
+    \endentry
+  \enddatalist
+  \missing{android_developers_architectures}
+  \missing{uvigo_cliente_servidor}
+\endrefsection
+\endinput
+
