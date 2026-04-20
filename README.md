@@ -93,7 +93,7 @@ Su objetivo es servir como paso previo para convertir un índice redactado manua
 
 
 > [!NOTE]  
-> para que funcione el `.txt` de bebe seguir un formato en concreto como se indica en la seccion [generar_capitulos_latex](#índice-del-tfm)
+> para que funcione el `.txt` de bebe seguir un formato en concreto como se indica en la seccion [_**Índice del TFM**_](#-índice-del-tfm)
 
 ### 3. `generar_capitulos_latex.py`
 Un potente script de Python que:
