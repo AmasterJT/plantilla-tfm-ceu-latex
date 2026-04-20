@@ -44,16 +44,47 @@ Esta es una solución modular y automatizada diseñada para la redacción de Tra
 ### 1. `main.tex`
 Es el núcleo del proyecto. Aquí se cargan los paquetes, se definen las fuentes (Times New Roman, Arial, Calibri) y se establece el orden de las secciones. No debes escribir contenido aquí, solo gestionar qué archivos se incluyen.
 
-### 2. `generar_capitulos_latex.py`
+### 2. `conversor_indice_txt_a_json.py`
+Un script de Python para transformar un índice en texto plano (`.txt`) a un archivo estructurado en formato JSON.
+
+Permite:
+
+- Leer un índice escrito con estructura jerárquica basada en capítulos, secciones, subsecciones y anexos.
+
+- Detectar automáticamente el nivel de cada entrada mediante su numeración (`Capítulo 1`, `4.1`, `4.1.1`, etc.).
+
+- Limpiar los prefijos del índice para conservar únicamente los títulos reales.
+
+- Generar un archivo `.json` compatible con el script `generar_capitulos_latex.py`.
+
+- Guardar el resultado automáticamente junto al fichero de entrada, o en una ruta personalizada mediante el parámetro `-o`.
+
+Su objetivo es servir como paso previo para convertir un índice redactado manualmente en un formato estructurado reutilizable dentro de la plantilla.
+
+
+> [!NOTE]  
+> para que funcione el `.txt` de bebe seguir un formato en concreto como se indica en la seccion [generar_capitulos_latex](#índice-del-tfm)
+
+### 3. `generar_capitulos_latex.py`
 Un potente script de Python que:
 
-- Lee un archivo de índice (`.json`, `.yaml`, `.toml` o `.txt`).
+- Lee un archivo de índice (`.json`, `.yaml` o `.toml`).
 
 - Borra los capítulos antiguos de `Cuerpo/` (excepto el resumen).
 
 - Crea los nuevos archivos `.tex` con la estructura de secciones/subsecciones.
 
 - Actualiza automáticamente el `main.tex` insertando los comandos `\include` necesarios.
+
+
+### 4. `Formatos/`
+- `Cuerpo.tex`: Define cómo se ven las secciones, las cabeceras (`fancyhdr`) y el espaciado. **⚠️ NO TOCAR este fichero**
+
+- `listings.tex`: Configura el resaltado de sintaxis para bloques de código.
+
+- `comandos.tex`: Macros personalizadas para facilitar la escritura.
+
+## 🧾 Índice del TFM
 
 <p align="center">
   <img src="Imagenes/README/indice.png" alt="Indices" /><br>
@@ -65,15 +96,6 @@ Un potente script de Python que:
   <em>Figura 3. Ejemplo de capítulo</em>
 </p>
 
-
-### 3. `Formatos/`
-- `Cuerpo.tex`: Define cómo se ven las secciones, las cabeceras (`fancyhdr`) y el espaciado. **⚠️ NO TOCAR este fichero**
-
-- `listings.tex`: Configura el resaltado de sintaxis para bloques de código.
-
-- `comandos.tex`: Macros personalizadas para facilitar la escritura.
-
-## 🧾 Índice del TFM
 
 Si bien podemos crear la estructura del proyecto manualmente, contamos con un script `generar_capitulos_latex.py` que genera toda la estructura deseada. Para que funcione este script podemos usar los siguientes formatos
 
