@@ -31,7 +31,7 @@ Esta es una solución modular y automatizada diseñada para la redacción de Tra
 ├── Cuerpo/                    # ✍️ Contenido real (Resumen, Capítulos, Anexos)
 ├── Formatos/                  # 🎨 Diseño (Estilos de títulos, cabeceras, código)
 ├── Glosario/                  # 📖 Siglas y definiciones de términos
-├── Ficheros CEU               # 📖 Documentos originales proporcionados por la universidad
+├── Ficheros CEU/              # 📖 Documentos originales proporcionados por la universidad
 ├── Imagenes/                  # 🖼️ Gráficos y figuras del contenido
 ├── Logo/                      # 🏫 Logos institucionales (Portada/Cabecera)
 └── Portada/                   # 📄 Configuración de la cubierta
@@ -386,6 +386,8 @@ Anexos = [
 - `comandos.tex`: Macros personalizadas para facilitar la escritura.
 
 ## 🚀 Guía de Uso
+
+[![Ver demo](Imagenes/README/demo_creacion_tfm.gif)](Imagenes/README/demo_creacion_tfm.mp4)
 
 **1️⃣ Paso 1: Configurar la Portada**
 

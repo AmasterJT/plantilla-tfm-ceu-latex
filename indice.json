@@ -62,22 +62,10 @@
         "Conclusiones",
         "Líneas futuras"
       ]
-    },
-
-    {
-      "titulo": "AAAAAAAAAAAAA",
-      "secciones": [
-        "BBBBBBBBB",
-        "CCCCCCCCCCCCC"
-      ]
     }
-
   ],
-  
   "Anexos": [
-    "Manueales",
-    "Titulo anexo II"
+    "Manuales",
+    "Titulo anexo ii"
   ]
-
-  
 }
