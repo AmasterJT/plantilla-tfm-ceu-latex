@@ -31,7 +31,7 @@ Esta es una solución modular y automatizada diseñada para la redacción de Tra
 - [🎨 Personalizaciones](#-personalizaciones)  
 
 - [📘 Buenas prácticas: Figuras, Tablas y Enlaces](#-buenas-prácticas-figuras-tablas-y-enlaces)
-  - [🙍🏼‍♂️ Cabeceras](#️configuración-de-la-cabecera-de-cada-capítulo)
+  - [🙍🏼‍♂️ Cabeceras](#️-configuración-de-la-cabecera-de-cada-capítulo)
   - [🔗 Enlaces](#-uso-de-enlaces)  
   - [🖼️ Figuras](#️-inserción-de-figuras)  
   - [📊 Tablas](#-inserción-de-tablas)  
@@ -39,7 +39,7 @@ Esta es una solución modular y automatizada diseñada para la redacción de Tra
 - [📚 Citas, Bibliografía y Glosario](#-citas-bibliografía-y-glosario)  
   - [🔖 Citas y referencias](#1--citas-y-referencias)  
   - [📚 Bibliografía](#-2-bibliografía-automática)  
-  - [📖 Glosario y siglas](#-3-glosario-y-siglass)  
+  - [📖 Glosario y siglas](#-3-glosario-y-siglas)  
 
 - [⚠️ Notas Importantes](#️-notas-importantes)
 
@@ -646,7 +646,7 @@ Para insertar código, usa el entorno definido en `listings.tex`:
 
 ## 📘 Buenas prácticas: Figuras, Tablas y Enlaces
 
-### 🙍🏼‍♂️Configuración de la cabecera de cada capítulo
+### 🖊️ Configuración de la cabecera de cada capítulo
 
 Puedes cambiar el texto de la cabecera en cada capítulo usando el comando:
 
