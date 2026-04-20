@@ -7,6 +7,11 @@
 
 Esta es una plantilla modular y automatizada para la redacción de Trabajos Fin de Máster (TFM) del máster en ciberseguridad. Está diseñada para separar el diseño del contenido y automatizar la creacion de la estructura de ficheros  mediante scripts de Python.
 
+<p align="center">
+  <img src="Imagenes/README/portadas.png" alt="Portadas"/>
+  <em>Figura 1. Portadas de la plantilla</em>
+</p>
+
 ## 📂 Estructura del Proyecto
 
 ```text
@@ -38,6 +43,16 @@ Un potente script de Python que:
 - Crea los nuevos archivos `.tex` con la estructura de secciones/subsecciones.
 
 - Actualiza automáticamente el `main.tex` insertando los comandos `\include` necesarios.
+
+<p align="center">
+  <img src="Imagenes/README/indice.png" alt="Indices" /><br>
+  <em>Figura 2. Ejemplo de índices</em>
+</p>
+
+<p align="center">
+  <img src="Imagenes/README/capitulo.png" alt="Capitulo ejemplo" /><br>
+  <em>Figura 3. Ejemplo de capítulo</em>
+</p>
 
 
 <details>
