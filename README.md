@@ -664,6 +664,13 @@ Puedes cambiar el texto de la cabecera en cada capítulo usando el comando:
 \enlace{https://administracionelectronica.gob.es/...}{documentación sobre técnicas de la metodología Métrica 3}
 ```
 
+<p align="center">
+  <img src="Imagenes/README/ejemplo_enlace.png" alt="Indices" /><br>
+  <em>Figura 3. Ejemplo de enlace</em>
+</p>
+
+
+
 ---
 
 ### 🖼️ Inserción de figuras
@@ -675,6 +682,12 @@ Puedes cambiar el texto de la cabecera en cada capítulo usando el comando:
     \captionazul{Ejemplo ilustrativo de una figura}
 \end{figure}
 ```
+
+<p align="center">
+  <img src="Imagenes/README/ejemplo_figura.png" alt="Indices" /><br>
+  <em>Figura 4. Ejemplo de figura</em>
+</p>
+
 
 ---
 
@@ -692,11 +705,21 @@ Puedes cambiar el texto de la cabecera en cada capítulo usando el comando:
         \hline
         RF01 & Descripción del requisito funcional 01. \\
         \hline
+        RF02 & Descripción del requisito funcional 02. \\
+        \hline
+        \ldots & \ldots \\
+        \hline
+        RFN & Descripción del requisito funcional N. \\
+        \hline
     \end{tabular}
-
     \label{tab:requisitos_funcionales}
 \end{table}
 ```
+
+<p align="center">
+  <img src="Imagenes/README/ejemplo_tabla.png" alt="Indices" /><br>
+  <em>Figura 4. Ejemplo de figura</em>
+</p>
 
 ---
 
