@@ -17,6 +17,10 @@ Esta es una solución modular y automatizada diseñada para la redacción de Tra
 
 <p align="center">
   <img src="Imagenes/README/portadas.png" alt="Portadas"/>
+
+https://github.com/user-attachments/assets/743e800f-8fae-481d-b68d-001b2f3f461d
+
+
   <em>Figura 1. Portadas de la plantilla</em>
 </p>
 
@@ -387,7 +391,11 @@ Anexos = [
 
 ## 🚀 Guía de Uso
 
-[![Ver demo](Imagenes/README/demo_creacion_tfm.mp4)](Imagenes/README/demo_creacion_tfm.mp4)
+
+
+https://github.com/user-attachments/assets/1e4107ff-e795-480e-85b6-6e97b463612d
+
+
 
 **1️⃣ Paso 1: Configurar la Portada**
 
