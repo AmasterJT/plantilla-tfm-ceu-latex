@@ -1,4 +1,113 @@
-
+% =========================================================
+% bibliografia.bib
+% Base de datos de referencias bibliográficas del TFM
+% =========================================================
+%
+% Este fichero contiene todas las referencias utilizadas en el documento
+% en formato BibTeX. Es procesado automáticamente por BibLaTeX + Biber
+% para generar:
+%   - Notas al pie con referencias completas
+%   - La bibliografía final del documento
+%
+% ---------------------------------------------------------
+% 📌 ¿Cómo usar este fichero?
+% ---------------------------------------------------------
+%
+% 1. Añade una nueva referencia siguiendo el formato adecuado:
+%
+%    @tipo{clave_unica,
+%      campo = {valor}
+%    }
+%
+% 2. Usa la clave en el documento LaTeX mediante los comandos
+%    personalizados definidos en comandos.tex, por ejemplo:
+%
+%    \footcitepage{Texto citado}{clave_unica}{pagina}
+%    \footweb{clave_unica}
+%    \footbibliographypage{clave_unica}{pagina}
+%
+% 3. La bibliografía se generará automáticamente con:
+%
+%    \printbibliography
+%
+% ---------------------------------------------------------
+% 📚 Tipos de entradas más comunes
+% ---------------------------------------------------------
+%
+% 📘 Libro:
+%   @book{clave,ª
+%     author    = {Apellido, Nombre},
+%     title     = {Título},
+%     year      = {Año},
+%     publisher = {Editorial}
+%   }
+%
+% 🎓 Tesis:
+%   @phdthesis{clave,
+%     author = {Apellido, Nombre},
+%     title  = {Título},
+%     school = {Universidad},
+%     year   = {Año}
+%   }
+%
+% 🌐 Web:
+%   @online{clave,
+%     author  = {Entidad},
+%     title   = {Título},
+%     year    = {Año},
+%     url     = {https://...},
+%     urldate = {YYYY-MM}
+%   }
+%
+% 📄 Artículo:
+%   @article{clave,
+%     author  = {Autor1 and Autor2},
+%     title   = {Título},
+%     journal = {Revista},
+%     year    = {Año}
+%   }
+%
+% ---------------------------------------------------------
+% ⚠️ Reglas importantes
+% ---------------------------------------------------------
+%
+% - Cada entrada debe tener una clave única:
+%     ❌ @online{mi_ref, ...}
+%     ❌ @online{mi_ref, ...}  (duplicada)
+%     ✔ @online{mi_ref_1, ...}
+%
+% - Usa nombres descriptivos para las claves:
+%     ✔ somerville_software_engineering
+%     ❌ ref1
+%
+% - Campos obligatorios recomendados:
+%     author, title, year
+%
+% - Para webs, incluye siempre:
+%     url y urldate
+%
+% ---------------------------------------------------------
+% ⚙️ Compilación
+% ---------------------------------------------------------
+%
+% Para que las referencias funcionen correctamente:
+%
+% 1. Compilar con XeLaTeX
+% 2. Ejecutar Biber
+% 3. Volver a compilar (2 veces)
+%
+% En VS Code (LaTeX Workshop), usar:
+%   👉 "Compilar TFM Completo"
+%
+% ---------------------------------------------------------
+% 💡 Notas
+% ---------------------------------------------------------
+%
+% - No es necesario ordenar manualmente la bibliografía
+% - BibLaTeX se encarga del formato (IEEE en este proyecto)
+% - Las referencias solo aparecen si se usan en el documento
+%
+% =========================================================
 
 
 @book{somerville_software_engineering,
