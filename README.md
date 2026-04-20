@@ -7,14 +7,12 @@
 
 Esta es una solución modular y automatizada diseñada para la redacción de Trabajos Fin de Máster (TFM) para el máster en ciberseguridad. El objetivo principal es permitir que el alumno se centre exclusivamente en el contenido, delegando el diseño y la gestión de la estructura a un sistema basado en LaTeX y Python.
 
-<div style="border-left: 5px solid #d9534f; padding: 12px; background-color: #fdf2f2; color: #000000ff;">
-<strong>⚠️ Disclaimer: Proyecto No Oficial</strong>
-
-Esta plantilla no es un documento oficial de la universidad. Es una herramienta independiente desarrollada para emular el formato de la plantilla de Microsoft Word: *3. Plantilla TFM_CIBER_v2.0.docx*.
-
-Es responsabilidad del alumno verificar que el resultado final cumple con los requisitos específicos de su convocatoria y tutor antes de la entrega definitiva.
-</div>
-
+> [!WARNING] 
+> ⚠️ **Disclaimer: Proyecto No Oficial**  
+>  
+> Esta plantilla no es un documento oficial de la universidad. Es una herramienta independiente desarrollada para emular el formato de la plantilla de Microsoft Word: *3. Plantilla TFM_CIBER_v2.0.docx*.  
+>  
+> Es responsabilidad del alumno verificar que el resultado final cumple con los requisitos específicos de su convocatoria y tutor antes de la entrega definitiva.
 ###
 
 <p align="center">
