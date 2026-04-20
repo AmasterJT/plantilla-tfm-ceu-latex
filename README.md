@@ -1,7 +1,7 @@
 # 🎓 Plantilla TFM CEU - LaTeX
 
 ![Status](https://img.shields.io/badge/status-en%20desarrollo-yellow)
-![Cybersecurity](https://img.shields.io/badge/focus-Latex-red)
+![Cybersecurity](https://img.shields.io/badge/focus-TFM-red)
 ![Platform](https://img.shields.io/badge/platform-VScode-blue)
 ![License](https://img.shields.io/badge/license-Academic-lightgrey)
 
@@ -446,12 +446,6 @@ Para una experiencia óptima con esta plantilla en VS Code, se recomienda instal
 El proyecto incluye un **Recipe** personalizado:
 - `Compilar TFM Completo`: Ejecuta XeLaTeX, Biber (bibliografía) y Makeglossaries (siglas) en el orden correcto. Se recomienda usar este al menos una vez al día o cuando se añadan nuevas citas/siglas.
 - `XeLaTeX Rápido`: Úsalo para previsualizar cambios en el texto de forma instantánea.
-
-### Limpieza de Basura
-La configuración proporcionada en `settings.json` está programada para **borrar automáticamente** los archivos auxiliares (`.aux`, `.log`, `.toc`, etc.) cada vez que la compilación termina con éxito. Esto mantiene la carpeta del proyecto limpia y lista para subir a Overleaf o Git.
-
-### Visualización
-El PDF se abrirá automáticamente en una pestaña lateral del editor. Gracias a `synctex`, si haces **Ctrl + Click** en el PDF, VS Code te llevará a la línea exacta del código `.tex` (y viceversa).
 
 ### Requisitos de VS Code
 Asegúrate de tener en tu `settings.json`:
