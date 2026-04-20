@@ -780,6 +780,53 @@ La plantilla utiliza comandos personalizados para gestionar citas de forma unifo
 ```
 
 
+<p align="center">
+  <img src="Imagenes/README/citas_parte1.png" alt="Indices" height="500px"/><br>
+  <img src="Imagenes/README/citas_parte2.png" alt="Indices" height="500px"/><br>
+  <em>Figura 5. Ejemplo de citas</em>
+</p>
+
+<details>
+<summary>⚙️ Ver Codigo latex de la imagen anterior</summary>
+
+  ```latex
+
+Este anexo recoge ejemplos de uso de los comandos personalizados definidos en la plantilla para comprobar cómo se muestran en el PDF final las citas, las referencias bibliográficas, las siglas y las definiciones del glosario.
+
+\subsection*{Ejemplos de siglas y términos del glosario}
+
+En este párrafo se fuerzan varias apariciones de entradas del glosario y siglas para comprobar su comportamiento. Un \gls{backend} puede construirse sobre un \gls{framework} moderno y exponer una \acrshort{api} de tipo \acrshort{rest}. En algunos contextos, un \acrshort{erp} puede integrarse con un \acrshort{wms} para compartir información logística. Además, en una implementación Java, el uso de \gls{jdbc} permite obtener un \gls{resultset} como resultado de una consulta a base de datos.
+
+También se puede comprobar la diferencia entre formas corta y larga de las siglas. Por ejemplo, \acrlong{api} es el desarrollo completo de \acrshort{api}, mientras que \acrlong{rest} desarrolla la sigla \acrshort{rest}. De forma similar, \acrlong{erp} y \acrlong{wms} muestran el nombre extendido de cada término.
+
+\subsection*{Ejemplos de citas en nota al pie}
+
+A continuación se muestran ejemplos de todos los comandos de cita definidos en la plantilla.
+
+Ejemplo de cita textual con página usando \texttt{\textbackslash footcitepage}: \footcitepage{Software engineering is concerned with theories, methods and tools for professional software development}{somerville_software_engineering}{7}.
+
+Ejemplo de nota al pie con referencia y página usando \texttt{\textbackslash footbibliographypage}. Este comentario incluye únicamente la referencia en nota al pie\footbibliographypage{fielding_rest}{76} para comprobar su aspecto visual.
+
+Ejemplo de cita web completa usando \texttt{\textbackslash footweb}. La guía sobre APIs y linked data puede consultarse en la referencia correspondiente\footweb{redes_api_rest}.
+
+Ejemplo de cita web con fragmento usando \texttt{\textbackslash footwebfragment}. En este caso se añade un fragmento relevante de la fuente web\footwebfragment{mysql_documentation}{The MySQL Reference Manual contains detailed information about server administration, SQL syntax and APIs}.
+
+Ejemplo de cita web con texto citado usando \texttt{\textbackslash footwebcite}: \footwebcite{Buenas prácticas en el diseño de APIs y linked data}{redes_api_rest}{Documento institucional del Gobierno de España sobre diseño de APIs y linked data}.
+
+Ejemplo de definición con referencia usando \texttt{\textbackslash footcitedefinition}: \footcitedefinition{La ingeniería del software puede entenderse como una disciplina orientada al desarrollo profesional de sistemas software}{somerville_software_engineering}{5}.
+
+\subsection*{Ejemplo combinado}
+
+El estudio de un \acrshort{wms} puede apoyarse en literatura académica especializada. Por ejemplo, \footcitepage{Research on warehouse design and performance evaluation}{wms_overview}{539} permite comprobar el estilo de cita textual con página. Del mismo modo, una arquitectura \acrshort{rest} puede justificarse mediante trabajos académicos previos\footbibliographypage{fielding_rest}{50}, mientras que la documentación técnica de plataformas concretas puede citarse como fuente web\footweb{mysql_documentation}.
+
+Un sistema real suele componerse de un \gls{backend}, uno o varios servicios expuestos mediante \acrshort{api} y mecanismos de persistencia gestionados con tecnologías como \gls{jdbc}. Todo ello puede implementarse con ayuda de un \gls{framework}, cuya definición también aparecerá posteriormente en el glosario.
+
+\subsection*{Texto de relleno para comprobar múltiples referencias}
+
+Este párrafo no busca coherencia temática, sino mostrar varias llamadas seguidas a comandos personalizados. La expresión \footcitepage{professional software development}{somerville_software_engineering}{3} permite ver cómo se integra una cita en línea con el resto del texto. A continuación se añade una referencia bibliográfica aislada\footbibliographypage{wms_overview}{541}. Después se añade una referencia web con fragmento\footwebfragment{redes_api_rest}{Se describen recomendaciones sobre diseño e interoperabilidad de APIs}. Finalmente, se incluye otra cita textual web para comprobar el espaciado y el formato\footwebcite{Reference Manual}{mysql_documentation}{Información oficial sobre administración, sintaxis SQL y conectores}.
+```
+</details>
+
 
 ## 📚 2. Bibliografía (automática)
 
