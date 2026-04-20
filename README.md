@@ -5,7 +5,17 @@
 ![Platform](https://img.shields.io/badge/platform-VScode-blue)
 ![License](https://img.shields.io/badge/license-Academic-lightgrey)
 
-Esta es una plantilla modular y automatizada para la redacción de Trabajos Fin de Máster (TFM) del máster en ciberseguridad. Está diseñada para separar el diseño del contenido y automatizar la creacion de la estructura de ficheros  mediante scripts de Python.
+Esta es una solución modular y automatizada diseñada para la redacción de Trabajos Fin de Máster (TFM) para el máster en ciberseguridad. El objetivo principal es permitir que el alumno se centre exclusivamente en el contenido, delegando el diseño y la gestión de la estructura a un sistema basado en LaTeX y Python.
+
+<div style="border-left: 5px solid #d9534f; padding: 12px; background-color: #fdf2f2; color: #000000ff;">
+<strong>⚠️ Disclaimer: Proyecto No Oficial</strong>
+
+Esta plantilla no es un documento oficial de la universidad. Es una herramienta independiente desarrollada para emular el formato de la plantilla de Microsoft Word: *3. Plantilla TFM_CIBER_v2.0.docx*.
+
+Es responsabilidad del alumno verificar que el resultado final cumple con los requisitos específicos de su convocatoria y tutor antes de la entrega definitiva.
+</div>
+
+###
 
 <p align="center">
   <img src="Imagenes/README/portadas.png" alt="Portadas"/>
@@ -23,6 +33,7 @@ Esta es una plantilla modular y automatizada para la redacción de Trabajos Fin 
 ├── Cuerpo/                    # ✍️ Contenido real (Resumen, Capítulos, Anexos)
 ├── Formatos/                  # 🎨 Diseño (Estilos de títulos, cabeceras, código)
 ├── Glosario/                  # 📖 Siglas y definiciones de términos
+├── Ficheros CEU               # 📖 Documentos originales proporcionados por la universidad
 ├── Imagenes/                  # 🖼️ Gráficos y figuras del contenido
 ├── Logo/                      # 🏫 Logos institucionales (Portada/Cabecera)
 └── Portada/                   # 📄 Configuración de la cubierta
