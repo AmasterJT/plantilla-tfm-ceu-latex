@@ -5,7 +5,7 @@
 ![Platform](https://img.shields.io/badge/platform-VScode-blue)
 ![License](https://img.shields.io/badge/license-Academic-lightgrey)
 
-Esta es una plantilla modular y automatizada para la redacción de Trabajos Fin de Máster (TFM). Está diseñada para separar el diseño del contenido y automatizar las tareas repetitivas mediante scripts de Python.
+Esta es una plantilla modular y automatizada para la redacción de Trabajos Fin de Máster (TFM) del máster en ciberseguridad. Está diseñada para separar el diseño del contenido y automatizar la creacion de la estructura de ficheros  mediante scripts de Python.
 
 ## 📂 Estructura del Proyecto
 
