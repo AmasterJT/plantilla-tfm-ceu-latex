@@ -13,6 +13,20 @@ Esta es una solución modular y automatizada diseñada para la redacción de Tra
 > Esta plantilla no es un documento oficial de la universidad. Es una herramienta independiente desarrollada para emular el formato de la plantilla de Microsoft Word: *3. Plantilla TFM_CIBER_v2.0.docx*.  
 >  
 > Es responsabilidad del alumno verificar que el resultado final cumple con los requisitos específicos de su convocatoria y tutor antes de la entrega definitiva.
+
+### 📑 Índice del README
+- [📂 Estructura del Proyecto](#-estructura-del-proyecto)
+- [🛠️ Archivos Clave](#️-archivos-clave)
+  - [main.tex](#1-maintex)
+  - [conversor_indice_txt_a_json.py](#2-conversor_indice_txt_a_jsonpy)
+  - [generar_capitulos_latex.py](#3-generar_capitulos_latexpy)
+  - [Formatos](#4-formatos)
+- [🧾 Índice del TFM](#-índice-del-tfm)
+- [💻 Configuración VS Code](#-configuración-recomendada-vs-code)
+- [🚀 Guía de Uso](#-guía-de-uso---redacción-del-tfm)
+- [🎨 Personalizaciones](#-personalizaciones)
+- [⚠️ Notas Importantes](#️-notas-importantes)
+
 ###
 
 <p align="center">
@@ -27,7 +41,7 @@ Esta es una solución modular y automatizada diseñada para la redacción de Tra
 ├── main.tex                       # 🎛️ Orquestador principal (Preámbulo y estructura)
 ├── conversor_indice_txt_a_json.py # 🐍 Script que traduce el indice.txt a indice.json
 ├── generar_capitulos_latex.py     # 🐍 Script de automatización de capítulos
-├── indice.json                    # 📋 Definición de la estructura del TFM
+├── indice.json (o bien .txt)      # 📋 Definición de la estructura del TFM
 ├── Bibliografia/                  # 📚 Referencias y estilos (BibLaTeX)
 ├── Cuerpo/                        # ✍️ Contenido real (Resumen, Capítulos, Anexos)
 ├── Formatos/                      # 🎨 Diseño (Estilos de títulos, cabeceras, código)
@@ -423,65 +437,6 @@ Anexos = [
 ```
 </details>
 
-## 🚀 Guía de Uso - Redacción del TFM
-
-
-https://github.com/user-attachments/assets/743e800f-8fae-481d-b68d-001b2f3f461d
-
-### 1. Creación del indice
-
-Para redactar el TFM primero debemos definir su estructura, es decir, crear el indice. Para ello podemos usar diferentes formatos como se indica en la seccion [generar_capitulos_latex](#índice-del-tfm)
-
-
-**1️⃣ Paso 1: Configurar la Portada**
-
-En `main.tex`, localiza la línea de `\printportada` y rellena tus datos:
-
-```latex
-\printportada{Título del TFM}{Nombre del Autor}{Nombre del Tutor}{Julio, 2026}{TFM Title in English}
-```
-
-**2️⃣ Paso 2: Definir el Índice**
-
-Necesitamos el fichero `indice.json` con la estructura deseada (Si partimos de un fichero `.txt`  _**[ver generador de indice.json](#2-conversor_indice_txt_a_jsonpy)**_):
-
-```json
-{
-  "capitulos": [
-    {
-      "titulo": "Introducción",
-      "secciones": ["Contexto", "Objetivos"]
-    }
-  ],
-  "Anexos": ["Código Fuente", "Manual de Usuario"]
-}
-```
-
-
-### 💡 Reglas de Oro para los Índices
-1. **Nivel 1 (Capítulo):** Se genera como `\section{...}` y crea un nuevo archivo `.tex` en la carpeta `Cuerpo/`.
-
-2. **Nivel 2 (Sección):** Se genera como `\subsection{...}` dentro del archivo del capítulo.
-
-3. **Nivel 3 (Subsección):** Se genera como `\subsubsection{...}` (Configurado en tu `Cuerpo.tex` con tamaño 14pt y negrita).
-
-4. **Anexos:** Se generan con numeración romana (`Anexo i`, `Anexo ii`) y usan `\section*` para no alterar la numeración de los capítulos principales.
-###
-
-
-
-
-
-**3️⃣ Paso 3: Ejecutar el Generador**
-Abre una terminal y ejecuta:
-
-```python
-python generar_capitulos_latex.py indice.json
-```
-
-Esto preparará todos tus archivos en la carpeta `Cuerpo/` y los enlazará en el PDF.
-
-
 
 ## 💻 Configuración Recomendada (VS Code)
 
@@ -568,6 +523,80 @@ Asegúrate de tener en tu `settings.json`:
 }
 ```
 </details>
+
+
+
+## 🚀 Guía de Uso - Redacción del TFM
+
+https://github.com/user-attachments/assets/743e800f-8fae-481d-b68d-001b2f3f461d
+
+**0️⃣ Paso 0. Creación de la estructura del TFM** 
+
+Para redactar el TFM primero debemos definir su estructura, es decir, crear el indice. Para ello podemos usar diferentes formatos como se indica en la seccion [generar_capitulos_latex](#índice-del-tfm)
+
+Guardamos la estructura creada en `indice.txt` o bien en los demás formatos, en la carpeta del proyecto.
+
+
+**1️⃣ Paso 1: Configurar la Portada**
+
+En `main.tex`, localiza la línea de `\printportada` y rellena tus datos:
+
+```latex
+\printportada{Título del TFM}{Nombre del Autor}{Nombre del Tutor}{Julio, 2026}{TFM Title in English}
+```
+
+**2️⃣ Paso 2: Definir el Índice (opcional)**
+
+Necesitamos el fichero `indice.json` con la estructura deseada. Si partimos de un fichero `.txt`  (_**[ver generador de indice.json](#2-conversor_indice_txt_a_jsonpy)**_) debemos generarlo para ello usamos el script [`conversor_indice_txt_a_json.py`](#2-conversor_indice_txt_a_jsonpy):
+
+Abre una terminal y ejecuta:
+
+```python
+python .\conversor_indice_txt_a_json.py indice.txt
+```
+
+Obtenemos un fichero llamado `indice.json` como el siguiente:
+
+```json
+{
+  "capitulos": [
+    {
+      "titulo": "Introducción",
+      "secciones": ["Contexto", "Objetivos"]
+    }
+  ],
+  "Anexos": ["Código Fuente", "Manual de Usuario"]
+}
+```
+
+> [!NOTE]  
+> Si ya escribimos el indice en formato `JSON` no es necesario realizar este paso
+
+### 💡 Reglas de Oro para los Índices
+1. **Nivel 1 (Capítulo):** Se genera como `\section{...}` y crea un nuevo archivo `.tex` en la carpeta `Cuerpo/`.
+
+2. **Nivel 2 (Sección):** Se genera como `\subsection{...}` dentro del archivo del capítulo.
+
+3. **Nivel 3 (Subsección):** Se genera como `\subsubsection{...}` (Configurado en tu `Cuerpo.tex` con tamaño 14pt y negrita).
+
+4. **Anexos:** Se generan con numeración romana (`Anexo i`, `Anexo ii`) y usan `\section*` para no alterar la numeración de los capítulos principales.
+###
+
+
+
+
+
+**3️⃣ Paso 3: Ejecutar el Generador**
+
+Aunque podemos generar manualmente los ficheros en el directorio `Cuerpo/`, si contamos con la estructura podemos generar todos los ficheros necesarios usando el script [`generar_capitulos_latex.py`](#3-generar_capitulos_latexpy)
+
+Abre una terminal y ejecuta:
+
+```python
+python generar_capitulos_latex.py indice.json
+```
+
+Esto preparará todos tus archivos en la carpeta `Cuerpo/` y los enlazará en el PDF.
 
 ## 🎨 Personalizaciones
 
