@@ -355,7 +355,7 @@ Anexos = [
 
 
 ### 3. `Formatos/`
-- `Cuerpo.tex`: Define cómo se ven las secciones, las cabeceras (`fancyhdr`) y el espaciado.
+- `Cuerpo.tex`: Define cómo se ven las secciones, las cabeceras (`fancyhdr`) y el espaciado. **⚠️ NO TOCAR este fichero**
 
 - `listings.tex`: Configura el resaltado de sintaxis para bloques de código.
 
@@ -363,7 +363,7 @@ Anexos = [
 
 ## 🚀 Guía de Uso
 
-**Paso 1: Configurar la Portada**
+**1️⃣ Paso 1: Configurar la Portada**
 
 En `main.tex`, localiza la línea de `\printportada` y rellena tus datos:
 
@@ -371,7 +371,7 @@ En `main.tex`, localiza la línea de `\printportada` y rellena tus datos:
 \printportada{Título del TFM}{Nombre del Autor}{Nombre del Tutor}{Julio, 2026}{TFM Title in English}
 ```
 
-**Paso 2: Definir el Índice**
+**2️⃣ Paso 2: Definir el Índice**
 Edita `indice.json` (o un archivo `.txt`) con la estructura deseada:
 
 ```json
@@ -397,7 +397,7 @@ Edita `indice.json` (o un archivo `.txt`) con la estructura deseada:
 4. **Anexos:** Se generan con numeración romana (`Anexo i`, `Anexo ii`) y usan `\section*` para no alterar la numeración de los capítulos principales.
 ###
 
-**Paso 3: Ejecutar el Generador**
+**3️⃣ Paso 3: Ejecutar el Generador**
 Abre una terminal y ejecuta:
 
 ```python
