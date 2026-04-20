@@ -15,16 +15,45 @@ Esta es una solución modular y automatizada diseñada para la redacción de Tra
 > Es responsabilidad del alumno verificar que el resultado final cumple con los requisitos específicos de su convocatoria y tutor antes de la entrega definitiva.
 
 ### 📑 Índice del README
-- [📂 Estructura del Proyecto](#-estructura-del-proyecto)
-- [🛠️ Archivos Clave](#️-archivos-clave)
-  - [main.tex](#1-maintex)
-  - [conversor_indice_txt_a_json.py](#2-conversor_indice_txt_a_jsonpy)
-  - [generar_capitulos_latex.py](#3-generar_capitulos_latexpy)
-  - [Formatos](#4-formatos)
-- [🧾 Índice del TFM](#-índice-del-tfm)
-- [💻 Configuración VS Code](#-configuración-recomendada-vs-code)
-- [🚀 Guía de Uso](#-guía-de-uso---redacción-del-tfm)
-- [🎨 Personalizaciones](#-personalizaciones)
+- [📂 Estructura del Proyecto](#-estructura-del-proyecto)  
+- [🛠️ Archivos Clave](#️-archivos-clave)  
+  - [1. main.tex](#1-maintex)  
+  - [2. conversor_indice_txt_a_json.py](#2-conversor_indice_txt_a_jsonpy)  
+  - [3. generar_capitulos_latex.py](#3-generar_capitulos_latexpy)  
+  - [4. Formatos](#4-formatos)  
+
+- [🧾 Índice del TFM](#-índice-del-tfm)  
+  - [Formatos de índices](#️-formatos-de-indices)  
+  - [Ejemplos de índices](#️-ver-ejemplos-de-formato-de-indices)  
+
+- [💻 Configuración Recomendada (VS Code)](#-configuración-recomendada-vs-code)  
+
+- [🚀 Guía de Uso - Redacción del TFM](#-guía-de-uso---redacción-del-tfm)  
+  - [Paso 0: Crear estructura](#0️⃣-paso-0-creación-de-la-estructura-del-tfm)  
+  - [Paso 1: Configurar portada](#1️⃣-paso-1-configurar-la-portada)  
+  - [Paso 2: Generar índice JSON](#2️⃣-paso-2-definir-el-índice-opcional)  
+  - [Paso 3: Generar capítulos](#3️⃣-paso-3-ejecutar-el-generador)  
+
+- [🎨 Personalizaciones](#-personalizaciones)  
+  - [Cambio de fuentes](#cambio-de-fuentes)  
+  - [Glosario](#gestión-de-glosarios)  
+  - [Código](#estilo-de-código)  
+  - [Cabeceras](#cabeceras-personalizadas) 
+
+- [📘 Buenas prácticas: Figuras, Tablas y Enlaces](#-buenas-prácticas-figuras-tablas-y-enlaces)
+  - [Enlaces](#-uso-de-enlaces)
+  - [Figuras](#️-inserción-de-figuras)
+  - [Tablas](#-inserción-de-tablas)
+
+- [📚 Guía de Figuras, Tablas y Enlaces](#-guía-de-figuras-tablas-y-enlaces)  
+  - [🔗 Enlaces](#-enlaces)  
+  - [🖼️ Figuras](#️-figuras)  
+  - [📊 Tablas](#-tablas)  
+
+- [📚 Citas, Bibliografía y Glosario](#-citas-bibliografía-y-glosario)  
+  - [🔖 Citas y referencias](#-citas-y-referencias)  
+  - [📚 Bibliografía](#-bibliografía-automática)  
+  - [📖 Glosario y siglas](#-glosario-y-siglas)  
 - [⚠️ Notas Importantes](#️-notas-importantes)
 
 ###
@@ -598,6 +627,8 @@ python generar_capitulos_latex.py indice.json
 
 Esto preparará todos tus archivos en la carpeta `Cuerpo/` y los enlazará en el PDF.
 
+
+
 ## 🎨 Personalizaciones
 
 **Cambio de Fuentes**
@@ -633,6 +664,224 @@ Puedes cambiar el texto de la cabecera en cada capítulo usando el comando:
 ```latex
 \nombreCapituloCabecera{RH}{Título de la Cabecera}
 ```
+
+## 📘 Buenas prácticas: Figuras, Tablas y Enlaces
+
+### 🔗 Uso de enlaces
+
+```latex
+% \enlace{url}{texto_visible}
+
+\enlace{https://administracionelectronica.gob.es/...}{documentación sobre técnicas de la metodología Métrica 3}
+```
+
+---
+
+### 🖼️ Inserción de figuras
+
+```latex
+\begin{figure}[H]
+    \includegraphics{Imagenes/Imagen-ejemplo.png}
+
+    \captionazul{Ejemplo ilustrativo de una figura}
+\end{figure}
+```
+
+---
+
+### 📊 Inserción de tablas
+
+```latex
+\begin{table}[h]
+    \centering
+    \captionazul{Ejemplo ilustrativo de una tabla}
+
+    \setlength{\arrayrulewidth}{0.05mm}
+    \begin{tabular}{|p{2cm}|p{10cm}|}
+        \hline
+        \textbf{Ref.} & \textbf{Descripción} \\
+        \hline
+        RF01 & Descripción del requisito funcional 01. \\
+        \hline
+    \end{tabular}
+
+    \label{tab:requisitos_funcionales}
+\end{table}
+```
+
+---
+
+### ⚠️ Reglas importantes
+
+- ❌ NO usar comandos estándar (`\caption`, `\href`)
+- ✅ Usar siempre los personalizados (`\captionazul`, `\enlace`)
+
+
+
+## 📚 Citas, Bibliografía y Glosario
+
+
+### 1. 🔖 Citas y referencias
+---
+
+
+La plantilla utiliza comandos personalizados para gestionar citas de forma uniforme.
+
+#### 📌 Cita con texto + página
+
+```latex
+\footcitepage{La seguridad es esencial}{nist2024}{15}
+```
+
+👉 Muestra el texto citado y añade una nota al pie con referencia completa + página.
+
+---
+
+#### 📌 Cita solo en nota al pie
+
+```latex
+\footbibliographypage{nist2024}{15}
+```
+
+---
+
+#### 🌐 Citas web
+
+```latex
+\footweb{owasp2024}
+```
+
+```latex
+\footwebfragment{owasp2024}{Validar entradas}
+```
+
+```latex
+\footwebcite{Texto citado}{owasp2024}{Fragmento relevante}
+```
+
+---
+
+#### 📖 Definiciones con referencia
+
+```latex
+\footcitedefinition{Confidencialidad}{iso27001}{8}
+```
+
+
+
+## 📚 2. Bibliografía (automática)
+
+La bibliografía se gestiona con **BibLaTeX + Biber**.
+
+📁 Archivo: `Bibliografia/bibliografia.bib`
+
+```bibtex
+@book{clave_unica,
+  author    = {Apellido, Nombre},
+  title     = {Título del libro},
+  edition   = {Edición},
+  year      = {Año},
+  publisher = {Editorial},
+  location  = {Ciudad}
+}
+```
+
+Ejemplo:
+
+```bibtex
+@book{somerville_software_engineering,
+  author = {Somerville, Ian},
+  title = {Software Engineering},
+  year = {2015}
+}
+```
+
+### 🔧 Cómo funciona
+
+1. Añades referencias al `.bib`
+2. Usas comandos de cita en el texto
+3. La bibliografía se genera automáticamente:
+
+```latex
+\printbibliography
+```
+
+---
+
+## 📖 3. Glosario y siglas
+
+📁 Archivo: `Glosario/glosario.tex`
+
+
+### 🔤 Definir términos
+
+```latex
+\newglossaryentry{clave}{
+    name={Nombre visible},
+    description={Descripción del término}
+}
+```
+
+Ejemplo
+
+```latex
+\newglossaryentry{backend}{
+    name=Backend,
+    description={Sistema de servidores y lógica}
+}
+```
+
+Uso en el texto:
+
+```latex
+\gls{backend}
+```
+
+
+### 🔠 Definir siglas
+
+```latex
+\newacronym{clave}{SIGLA}{Nombre completo}
+```
+
+Ejemplo:
+
+```latex
+\newacronym{api}{API}{Interfaz de Programación de Aplicaciones}
+```
+
+Uso:
+
+```latex
+\acrshort{api}
+\acrlong{api}
+```
+
+---
+
+### 🖨️ Generar glosario
+
+El proyecto ya contempla esto y genera automaticamente el glosario en el lugar correcto según la plantilla proporcionada
+
+```latex
+\crearglosario
+```
+
+✔ Añade automáticamente:
+- Glosario de siglas
+- Definiciones
+- Todas las entradas (aunque no se usen)
+
+
+
+#### ⚠️ Buenas prácticas
+
+- Usa SIEMPRE los comandos personalizados (no \cite manual)
+- Mantén el `.bib` organizado
+- Define términos clave en el glosario
+- No repitas definiciones en el texto
+
+
 
 ## ⚠️ Notas Importantes
 - Compilador: Es obligatorio usar XeLaTeX o LuaLaTeX debido al uso del paquete `fontspec` para las fuentes del sistema.
