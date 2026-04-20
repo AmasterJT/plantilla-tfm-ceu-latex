@@ -1,89 +1,72 @@
 \documentclass[12pt]{article}
-%\documentclass[11pt, twoside]{article}
 
-\usepackage{lipsum}
-
-% --- Codificación y fuentes ---
+% =========================================================
+% IDIOMA Y TIPOGRAFÍA
+% =========================================================
 \usepackage[T1]{fontenc}
-\usepackage{mathptmx}
 \usepackage[spanish, es-tabla]{babel}
-\usepackage{kpfonts}
-
-% --- Paquetes generales ---
-\usepackage{titletoc}
-\usepackage{graphicx}
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{xcolor}
-\usepackage{tikz}
-\usetikzlibrary{calc}
-\usepackage{array}
-\setlength{\arrayrulewidth}{0.1pt}
-\usepackage{enumitem}
-\usepackage{ragged2e}
-\usepackage{amsmath}
-\usepackage{float}
-\usepackage{booktabs}
-\usepackage{svg}
 \usepackage{fontspec}
-\usepackage{booktabs}
-\usepackage{fancyvrb}
-\usepackage[acronym]{glossaries}
-\makeglossaries
 
-% --- Fuentes ---
-% \setmonofont[
-%     Path = "fonts/FiraCode/",
-%     Extension = .ttf,
-%     UprightFont = *-Regular,
-%     BoldFont = *-Bold,
-% ]{FiraCode}
-\setmonofont{Arial}
 \setmainfont{Times New Roman}
-
+\setmonofont{Arial}
 \newfontfamily\calibribody{Calibri}
 
-
-% --- Márgenes y geometría ---
+% =========================================================
+% MAQUETACIÓN GENERAL
+% =========================================================
 \usepackage{geometry}
 \geometry{
   a4paper,
-  inner=30mm,    % margen interior (encuadernación)
-  outer=30mm,    % margen exterior
+  inner=30mm,
+  outer=30mm,
   top=35mm,
   bottom=30mm,
   headheight=45pt,
   headsep=8pt
 }
 
-\usepackage[utf8]{inputenc}
-
-% --- Encabezado y pie de página ---
-\usepackage{fancyhdr}
-
-% --- Estilo secciones ---
-\definecolor{AzulTFG}{RGB}{0, 148, 224}
-\definecolor{blueColor}{RGB}{69, 85, 107}
-%\definecolor{blue}{RGB}{0, 0, 0}
-\definecolor{bluelink}{RGB}{5, 99, 193}
-\usepackage{titlesec}
-
-% --- Interlineado entre párrafos y sangría ---
 \usepackage{parskip}
 \linespread{1.5}
 
-% --- Captions sin negrita ---
+% =========================================================
+% PAQUETES GENERALES
+% =========================================================
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
 \usepackage{caption}
-\usepackage{subcaption}
-\captionsetup{
-  labelfont={color=blueColor},
-  textfont=normalfont,
-  labelsep=space
-}
-
-
-% --- Hipervínculos ---
-\usepackage[normalem]{ulem}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\usepackage{float}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage[acronym]{glossaries}
 \usepackage[]{hyperref}
+\usepackage{listings}
+\usepackage{ragged2e}
+\usepackage{subcaption}
+\usepackage{svg}
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage[normalem]{ulem}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+
+\usetikzlibrary{calc}
+
+\makeglossaries
+\setlength{\arrayrulewidth}{0.1pt}
+
+% =========================================================
+% COLORES E HIPERVÍNCULOS
+% =========================================================
+\definecolor{AzulTFG}{RGB}{0, 148, 224}
+\definecolor{blueColor}{RGB}{69, 85, 107}
+\definecolor{bluelink}{RGB}{5, 99, 193}
 
 \hypersetup{
   colorlinks=true,
@@ -91,38 +74,21 @@
   linktoc=all
 }
 
-
-
-\titlecontents{figure}
-  [0pt]
-  {\color{black}\fontspec{Calibri}\addvspace{5pt}\fontsize{11pt}{14pt}\color{black}} % Fuente, espacio y NEGRO
-  {\color{black}Figura \thecontentslabel\quad}
-  {\color{black}}
-  {\color{black}\titlerule*[0.7pc]{.}\color{black}\contentspage}
-
-\titlecontents{table}
-  [0pt]
-  {\color{black}\fontspec{Calibri}\addvspace{5pt}\fontsize{11pt}{14pt}\color{black}} % Fuente, espacio y NEGRO
-  {\color{black}Tabla \thecontentslabel\quad}
-  {\color{black}}
-  {\color{black}\titlerule*[0.7pc]{.}\color{black}\contentspage}
-
-
-
 \renewcommand{\UrlFont}{\color{black}\uline}
 
-% --- Formato índice ---
-\usepackage[nottoc, notlot, notlof]{tocbibind}% (Esta línea en tu fichero original parece pensada para gallego,
-%  pero la mantengo por compatibilidad. En español no hace efecto.)
-\addto\captionsgalician{\renewcommand{\contentsname}{Contenido}}
-%\usepackage{tocloft}
-
-% --- Bibliografía ---
-\addto\captionsspanish{%
-  \renewcommand{\contentsname}{Índice de contenidos}
-  \renewcommand{\refname}{Bibliografía}
+% =========================================================
+% FORMATO DE CAPTIONS E ÍNDICES
+% =========================================================
+\captionsetup{
+  labelfont={color=blueColor},
+  textfont=normalfont,
+  labelsep=space
 }
 
+
+% =========================================================
+% BIBLIOGRAFÍA
+% =========================================================
 \usepackage[
   backend=biber,
   style=ieee,
@@ -136,234 +102,119 @@
 
 \addbibresource{Bibliografia/bibliografia.bib}
 
-% --- ANEXOS ---
-
-\usepackage{listings}
-
-\lstdefinelanguage{SQL}{
-  keywords={CREATE, TABLE, PRIMARY, KEY, FOREIGN, REFERENCES, NOT, NULL, UNIQUE, INSERT, INTO, VALUES, ALTER, ADD, CONSTRAINT, ON, DELETE, UPDATE, VARCHAR, INT, TIMESTAMP, DEFAULT, AUTO_INCREMENT, BOOLEAN, DELIMITER, NEW, SELECT, FROM, WHERE, AND, OR, DROP, DATABASE, IF, EXISTS, SET, END, CONCAT, DATE_FORMAT, ROW, BEGIN, DECLARE, THEN, IS},
-  sensitive=false,
-  morecomment=[l]{--},
-  morestring=[b]'
-}
-
-\lstset{
-  basicstyle=\ttfamily\small,
-  numbers=left,          % números a la izquierda
-  numberstyle=\tiny,     % tamaño del número
-  stepnumber=1,          % numerar todas las líneas
-  numbersep=8pt,         % separación número-código
-  xleftmargin=1.8em,
-  framexleftmargin=1.8em,
-  breaklines=true,
-  frame=single,
-  keywordstyle=\color{red}\bfseries,
-  commentstyle=\color{gray},
-  stringstyle=\color{green!40!black},
-  columns=fullflexible,
-  inputencoding=utf8,
-  extendedchars=true,
-  literate=
-  {á}{{\'a}}1
-  {é}{{\'e}}1
-  {í}{{\'i}}1
-  {ó}{{\'o}}1
-  {ú}{{\'u}}1
-  {Á}{{\'A}}1
-  {É}{{\'E}}1
-  {Í}{{\'I}}1
-  {Ó}{{\'O}}1
-  {Ú}{{\'U}}1
-  {ñ}{{\~n}}1
-  {Ñ}{{\~N}}1
-  {-}{{\~-}}1
-}
-
-
-% Título de la bibliografía (equivalente a \refname)
 \DefineBibliographyStrings{spanish}{%
   bibliography = {Bibliografía},
 }
-\newcommand{\footcitepage}[3]{%
-  ``#1''\footnote{%
-    \fullcite{#2}, p.~#3%
-  }%
-}
 
-\newcommand{\footbibliographypage}[2]{%
-  \footnote{%
-    \fullcite{#1}, p.~#2%
-  }%
-}
+% =========================================================
+% LISTINGS
+% =========================================================
+\input{Formatos/listings}
 
-\newcommand{\footwebfragment}[2]{%
-  \footnote{%
-    \fullcite{#1}. Fragmento: #2%
-  }%
-}
+% =========================================================
+% COMANDOS PERSONALIZADOS
+% =========================================================
 
-\newcommand{\footweb}[1]{%
-  \footnote{%
-    \fullcite{#1}
-  }%
-}
+\input{Formatos/comandos}
 
 
-\newcommand{\footwebcite}[3]{%
-  ``#1''\footnote{%
-    \fullcite{#2}. Fragmento: #3%
-  }%
-}
-
-\newcommand{\footcitedefinition}[3]{%
-  #1\footnote{%
-    \fullcite{#2}, p.~#3%
-  }%
-}
-
-\newcommand{\nombreCapituloCabecera}[2]{%
-  \fancyhead[#1]{\textit{#2}}
-}
-
-\newcommand{\logocabeceraCEU}[2]{%
-  \fancyhead[#1]{\includegraphics[height=1cm]{#2}}
-}
-
-
-
-\newcommand{\enlace}[2]{%
-    \href{#1}{\color{bluelink}\uline{#2}}%
-}
-
-\newcommand{\captionazul}[1]{\caption[#1]{\textcolor{blueColor}{#1}}}
-
-\renewcommand{\headrulewidth}{0pt}
-
-% --- Glosario ---
-\renewcommand*{\glossaryentrynumbers}[1]{}
-
-% --- Portada ---
-\usepackage{framed}
+% =========================================================
+% PORTADA
+% =========================================================
 \input{Portada/Portada}
 
-
-% \pagestyle{fancy}
-% \fancyhf{}
-
-% % Página impar (derecha)
-% \fancyhead[RO]{\thepage}
-% \fancyhead[LO]{\nouppercase{\rightmark}}
-
-% % Página par (izquierda)
-% \fancyhead[LE]{\thepage}
-% \fancyhead[RE]{\nouppercase{\leftmark}}
-
-% \renewcommand{\headrulewidth}{0.4pt}
-
-
-\newcommand{\permits}{\textcolor{green!60!black}{Sí}}
-\newcommand{\denies}{\textcolor{red!70!black}{No}}
-
-
-
-
-% \hypersetup{
-%     hidelinks
-% }
-
+% =========================================================
+% DOCUMENTO
+% =========================================================
 \begin{document}
 
-% --- Portada ---
-
-% Cambia los parámetros según el caso
-
+% ---------------------------------------------------------
+% PORTADA
+% ---------------------------------------------------------
 \printportada{Titulo en español}{Nombre del autor}{Nombre del tutor}{Julio, 2026}{TÍTULO en inglés}
 
-
-%\printportada{(MAYÚSCULAS NEGRITA Arial 20)}{José Tomás Torre Pedroarena}{Tutor (Arial 14)}{Julio, 2026}{TÍTULO en inglés}
-
-
-
-
+% ---------------------------------------------------------
+% CONFIGURACIÓN GENERAL DEL CUERPO
+% ---------------------------------------------------------
 \input{Formatos/Cuerpo}
 
-% Numeración romana para resumen e índices
+% ---------------------------------------------------------
+% PRELIMINARES
+% ---------------------------------------------------------
 \pagenumbering{roman}
 \pagestyle{plain}
 
-% --- Resumen ---
 \include{Cuerpo/00_Resumen_Abstract}
 
-% --- Índices ---
-\input{Formatos/Contenido_roman}
-\vspace*{-4cm}
-\tableofcontents
-\clearpage
+%\input{Formatos/Contenido_roman}
 
 \clearpage
-\vspace*{-4cm}
-\listoffigures
-
+\crearIndiceTOC
 
 \clearpage
-\vspace*{-4cm}
-\listoftables
+\crearIndiceFiguras
 
+\clearpage
+\crearIndiceTablas
+
+% ---------------------------------------------------------
+% CUERPO PRINCIPAL
+% ---------------------------------------------------------
 \clearpage
 \pagenumbering{arabic}
-\setcounter{page}{1} % Forzado de seguridad
-
+\setcounter{page}{1}
 \input{Formatos/Contenido}
 \pagestyle{fancy}
-
-
 
 % =========================================================
 % CUERPO DEL TRABAJO (estructura solicitada)
 % =========================================================
 
 
-
 % 1 Introducción
-\include{Cuerpo/01_Introduccion}
+\include{Cuerpo/01_introduccion}
 
 % 2 Gestión del proyecto
-\include{Cuerpo/02_Gestion_del_proyecto}
+\include{Cuerpo/02_gestion_del_proyecto}
 
-% 3 Marco teórico y tecnológico
-\include{Cuerpo/03_Análisis}
+% 3 Análisis
+\include{Cuerpo/03_analisis}
 
-% 4 Análisis del sistema
-\include{Cuerpo/04_Diseño_e_implementacion}
+% 4 Diseño e implementación
+\include{Cuerpo/04_diseno_e_implementacion}
 
-% 5 Diseño del sistema
+% 5 Validación del sistema
 \include{Cuerpo/05_validacion_del_sistema}
 
 % 6 Implementación
-\include{Cuerpo/06_conclusiones_y_lineas_futuras}
+\include{Cuerpo/06_implementacion}
+
+% 7 AAAAAAAAAAAAA
+\include{Cuerpo/07_aaaaaaaaaaaaa}
 
 
-
-
-% =========================================================
 % BIBLIOGRAFÍA
 % =========================================================
 \clearpage
 \vspace*{-1cm}
 
-\nombreCapituloCabecera{RH}{Bibliografía} % Título de la sección en la cabecera
-
+\nombreCapituloCabecera{RH}{Bibliografía}
 \printbibliography[title={Bibliografía}]
 
-% 9 anexos
-\include{Cuerpo/07_Anexos_I}
+% =========================================================
+% ANEXOS
+% =========================================================
 
-\include{Cuerpo/08_Anexos_II}
 
+% Anexo i - Manueales
+\include{Cuerpo/anexo_i_manueales}
+
+% Anexo ii - Titulo anexo II
+\include{Cuerpo/anexo_ii_titulo_anexo_ii}
+
+
+% GLOSARIO
+% =========================================================
 \clearpage
-\vspace*{-1cm}
-\glsaddall
-\vspace*{-2cm}
-\input{Glosario/glosario}
-
+\crearglosario
 \end{document}

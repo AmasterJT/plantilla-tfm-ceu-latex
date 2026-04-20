@@ -1,3 +1,232 @@
+main.tex
+
+\documentclass[12pt]{article}
+
+% =========================================================
+% IDIOMA Y TIPOGRAFÍA
+% =========================================================
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{fontspec}
+
+\setmainfont{Times New Roman}
+\setmonofont{Arial}
+\newfontfamily\calibribody{Calibri}
+
+% =========================================================
+% MAQUETACIÓN GENERAL
+% =========================================================
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  inner=30mm,
+  outer=30mm,
+  top=35mm,
+  bottom=30mm,
+  headheight=45pt,
+  headsep=8pt
+}
+
+\usepackage{parskip}
+\linespread{1.5}
+
+% =========================================================
+% PAQUETES GENERALES
+% =========================================================
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\usepackage{float}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage[acronym]{glossaries}
+\usepackage[]{hyperref}
+\usepackage{listings}
+\usepackage{ragged2e}
+\usepackage{subcaption}
+\usepackage{svg}
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage[normalem]{ulem}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+
+\usetikzlibrary{calc}
+
+\makeglossaries
+\setlength{\arrayrulewidth}{0.1pt}
+
+% =========================================================
+% COLORES E HIPERVÍNCULOS
+% =========================================================
+\definecolor{AzulTFG}{RGB}{0, 148, 224}
+\definecolor{blueColor}{RGB}{69, 85, 107}
+\definecolor{bluelink}{RGB}{5, 99, 193}
+
+\hypersetup{
+  colorlinks=true,
+  allcolors=black,
+  linktoc=all
+}
+
+\renewcommand{\UrlFont}{\color{black}\uline}
+
+% =========================================================
+% FORMATO DE CAPTIONS E ÍNDICES
+% =========================================================
+\captionsetup{
+  labelfont={color=blueColor},
+  textfont=normalfont,
+  labelsep=space
+}
+
+
+% =========================================================
+% BIBLIOGRAFÍA
+% =========================================================
+\usepackage[
+  backend=biber,
+  style=ieee,
+  sorting=none,
+  autolang=other,
+  bibencoding=utf8,
+  url=true,
+  doi=true,
+  isbn=true
+]{biblatex}
+
+\addbibresource{Bibliografia/bibliografia.bib}
+
+\DefineBibliographyStrings{spanish}{%
+  bibliography = {Bibliografía},
+}
+
+% =========================================================
+% LISTINGS
+% =========================================================
+\input{Formatos/listings}
+
+% =========================================================
+% COMANDOS PERSONALIZADOS
+% =========================================================
+
+\input{Formatos/comandos}
+
+
+% =========================================================
+% PORTADA
+% =========================================================
+\input{Portada/Portada}
+
+% =========================================================
+% DOCUMENTO
+% =========================================================
+\begin{document}
+
+% ---------------------------------------------------------
+% PORTADA
+% ---------------------------------------------------------
+\printportada{Titulo en español}{Nombre del autor}{Nombre del tutor}{Julio, 2026}{TÍTULO en inglés}
+
+% ---------------------------------------------------------
+% CONFIGURACIÓN GENERAL DEL CUERPO
+% ---------------------------------------------------------
+\input{Formatos/Cuerpo}
+
+% ---------------------------------------------------------
+% PRELIMINARES
+% ---------------------------------------------------------
+\pagenumbering{roman}
+\pagestyle{plain}
+
+\include{Cuerpo/00_Resumen_Abstract}
+
+%\input{Formatos/Contenido_roman}
+
+\clearpage
+\crearIndiceTOC
+
+\clearpage
+\crearIndiceFiguras
+
+\clearpage
+\crearIndiceTablas
+
+% ---------------------------------------------------------
+% CUERPO PRINCIPAL
+% ---------------------------------------------------------
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\input{Formatos/Contenido}
+\pagestyle{fancy}
+
+% =========================================================
+% CUERPO DEL TRABAJO (estructura solicitada)
+% =========================================================
+
+
+% 1 Introducción
+\include{Cuerpo/01_introduccion}
+
+% 2 Gestión del proyecto
+\include{Cuerpo/02_gestion_del_proyecto}
+
+% 3 Análisis
+\include{Cuerpo/03_analisis}
+
+% 4 Diseño e implementación
+\include{Cuerpo/04_diseno_e_implementacion}
+
+% 5 Validación del sistema
+\include{Cuerpo/05_validacion_del_sistema}
+
+% 6 Implementación
+\include{Cuerpo/06_implementacion}
+
+% 7 AAAAAAAAAAAAA
+\include{Cuerpo/07_aaaaaaaaaaaaa}
+
+
+% BIBLIOGRAFÍA
+% =========================================================
+\clearpage
+\vspace*{-1cm}
+
+\nombreCapituloCabecera{RH}{Bibliografía}
+\printbibliography[title={Bibliografía}]
+
+% =========================================================
+% ANEXOS
+% =========================================================
+
+
+% Anexo i - Manueales
+\include{Cuerpo/anexo_i_manueales}
+
+% Anexo ii - Titulo anexo II
+\include{Cuerpo/anexo_ii_titulo_anexo_ii}
+
+
+% GLOSARIO
+% =========================================================
+\clearpage
+\crearglosario
+
+\end{document}
+
+
+
+
+generar_capitulos_latex.py
+
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
@@ -605,3 +834,67 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+
+
+glosario.tex
+
+% =========================
+% Glosario de términos
+% =========================
+
+\newglossaryentry{backend}{
+    name=Backend,
+    description={Conjunto de servidores y componentes software encargados de proporcionar servicios, gestionar la lógica de negocio y permitir el acceso a recursos y datos desde aplicaciones cliente}
+}
+
+\newglossaryentry{framework}{
+    name=Framework,
+    description={Estructura de desarrollo compuesta por componentes de software reutilizables, librerías y convenciones que facilitan la creación de aplicaciones de forma estandarizada y eficiente}
+}
+
+\newglossaryentry{resultset}{
+    name=ResultSet,
+    description={Estructura de datos utilizada en JDBC para representar el conjunto de resultados devuelto por una consulta a una base de datos, permitiendo recorrer fila a fila los registros obtenidos y acceder a los valores de cada columna}
+}
+
+\newglossaryentry{jdbc}{
+    name=JDBC,
+    description={Java Database Connectivity, API estándar de Java que permite a las aplicaciones acceder y gestionar bases de datos relacionales mediante la ejecución de consultas SQL y la manipulación de los resultados obtenidos}
+}
+
+
+% =========================
+% Glosario de siglas
+% =========================
+
+\newacronym
+  [plural=WMS,
+   longplural={Sistemas de Gestión de Almacenes}]
+  {wms}{WMS}{Sistema de Gestión de Almacenes}
+
+\newacronym{api}{API}{Interfaz de Programación de Aplicaciones}
+\newacronym{rest}{REST}{Transferencia de Estado Representacional}
+\newacronym{erp}{ERP}{Planificación de Recursos Empresariales}
+
+
+% =========================
+% Impresión del glosario
+% =========================
+
+\section*{Glosario de siglas}
+\label{sec:glosario-siglas}
+\vspace{-1.3cm}
+
+\printglossary[type=\acronymtype, title={}, toctitle={}]
+
+\section*{Definiciones}
+\label{sec:glosario-terminos}
+\vspace{-1.3cm}
+
+\printglossary[title={}, toctitle={}]
+
+
+
+

@@ -1,0 +1,83 @@
+{
+  "capitulos": [
+    {
+      "titulo": "Introducción",
+      "secciones": [
+        "Contexto del TFM",
+        "Objetivos",
+        "Organización del trabajo"
+      ]
+    },
+    {
+      "titulo": "Gestión del proyecto",
+      "secciones": [
+        "Modelo de ciclo de vida",
+        "Planificación",
+        "Presupuesto (si procede)"
+      ]
+    },
+    {
+      "titulo": "Análisis",
+      "secciones": [
+        "Especificación de requisitos",
+        "Análisis de los Casos de Uso",
+        "Análisis de seguridad",
+        "Análisis desde la perspectiva del RGPD (si procede)"
+      ]
+    },
+    {
+      "titulo": "Diseño e implementación",
+      "secciones": [
+        {
+          "titulo": "Arquitectura del sistema",
+          "subsecciones": [
+            "Arquitectura física",
+            "Arquitectura lógica",
+            "Diagrama de infraestructuras de nivel 2 (si procede)",
+            "Diagrama de infraestructuras de nivel 3 (si procede)"
+          ]
+        },
+        {
+          "titulo": "Diseño de datos",
+          "subsecciones": [
+            "Migración y carga inicial de datos (si procede)"
+          ]
+        },
+        "Diseño de la interfaz de usuario",
+        "Diagrama de clases",
+        "Entorno de construcción",
+        "Referencia al repositorio de software"
+      ]
+    },
+    {
+      "titulo": "Validación del sistema",
+      "secciones": [
+        "Plan de pruebas",
+        "Evaluación del sistema (si procede)"
+      ]
+    },
+    {
+      "titulo": "Implementación",
+      "secciones": [
+        "Conclusiones",
+        "Líneas futuras"
+      ]
+    },
+
+    {
+      "titulo": "AAAAAAAAAAAAA",
+      "secciones": [
+        "BBBBBBBBB",
+        "CCCCCCCCCCCCC"
+      ]
+    }
+
+  ],
+  
+  "Anexos": [
+    "Manueales",
+    "Titulo anexo II"
+  ]
+
+  
+}

@@ -1,0 +1,60 @@
+% !TeX root = ../main.tex
+
+% =========================================================
+% CONFIGURACIÓN DE LISTINGS
+% =========================================================
+% Este fichero centraliza la configuración de bloques de código
+% (listings) utilizados en el documento.
+%
+% Sirve para:
+% - definir lenguajes personalizados, como SQL;
+% - establecer el estilo visual común de los bloques de código;
+% - configurar numeración, marcos y saltos de línea;
+% - soportar caracteres especiales en español.
+%
+% Debe cargarse desde main.tex, después de \usepackage{listings}
+% y después de cargar xcolor, porque listings usa colores.
+
+% =========================================================
+% DEFINICIÓN DEL LENGUAJE SQL
+% =========================================================
+\lstdefinelanguage{SQL}{ % Define un lenguaje personalizado llamado SQL
+  keywords={CREATE,TABLE,PRIMARY,KEY,FOREIGN,REFERENCES,NOT,NULL,UNIQUE,INSERT,INTO,VALUES,ALTER,ADD,CONSTRAINT,ON,DELETE,UPDATE,VARCHAR,INT,TIMESTAMP,DEFAULT,AUTO_INCREMENT,BOOLEAN,DELIMITER,NEW,SELECT,FROM,WHERE,AND,OR,DROP,DATABASE,IF,EXISTS,SET,END,CONCAT,DATE_FORMAT,ROW,BEGIN,DECLARE,THEN,IS}, % Palabras clave que se resaltarán como keywords
+  sensitive=false, % No distingue entre mayúsculas y minúsculas
+  morecomment=[l]{--}, % Define comentarios de una línea que empiezan con --
+  morestring=[b]' % Define cadenas delimitadas por comillas simples
+}
+
+% =========================================================
+% CONFIGURACIÓN GLOBAL DE LISTINGS
+% =========================================================
+\lstset{ % Aplica esta configuración a todos los bloques de código
+  basicstyle=\ttfamily\small, % Fuente monoespaciada y tamaño pequeño
+  numbers=left, % Muestra los números de línea a la izquierda
+  numberstyle=\tiny, % Usa tamaño pequeño para los números de línea
+  stepnumber=1, % Numera todas las líneas
+  numbersep=8pt, % Espacio entre la numeración y el código
+  xleftmargin=1.8em, % Desplaza el bloque completo hacia la derecha
+  framexleftmargin=1.8em, % Alinea el borde izquierdo con el margen del bloque
+  breaklines=true, % Permite partir líneas largas automáticamente
+  frame=single, % Dibuja un marco simple alrededor del bloque
+  keywordstyle=\color{red}\bfseries, % Muestra keywords en rojo y negrita
+  commentstyle=\color{gray}, % Muestra comentarios en gris
+  stringstyle=\color{green!40!black}, % Muestra cadenas en verde oscuro
+  columns=fullflexible, % Ajusta mejor el ancho de caracteres para alinear el código
+  inputencoding=utf8, % Permite leer caracteres UTF-8
+  extendedchars=true, % Activa soporte extendido de caracteres
+  literate= % Mapea caracteres especiales para evitar problemas con tildes y eñes
+    {á}{{\'a}}1 % Reemplaza á por su representación LaTeX
+    {é}{{\'e}}1 % Reemplaza é por su representación LaTeX
+    {í}{{\'\i}}1 % Reemplaza í usando \i para evitar conflictos con el acento
+    {ó}{{\'o}}1 % Reemplaza ó por su representación LaTeX
+    {ú}{{\'u}}1 % Reemplaza ú por su representación LaTeX
+    {Á}{{\'A}}1 % Reemplaza Á por su representación LaTeX
+    {É}{{\'E}}1 % Reemplaza É por su representación LaTeX
+    {Í}{{\'I}}1 % Reemplaza Í por su representación LaTeX
+    {Ó}{{\'O}}1 % Reemplaza Ó por su representación LaTeX
+    {Ú}{{\'U}}1 % Reemplaza Ú por su representación LaTeX
+    {ñ}{{\~n}}1 % Reemplaza ñ por su representación LaTeX
+    {Ñ}{{\~N}}1 % Reemplaza Ñ por su representación LaTeX
+}

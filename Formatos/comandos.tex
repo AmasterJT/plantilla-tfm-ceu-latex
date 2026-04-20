@@ -1,0 +1,272 @@
+% =========================================================
+% comandos.tex
+% Colección de comandos personalizados organizados por tipo
+% =========================================================
+%
+% Este fichero define atajos para:
+% 1) Citas y notas al pie
+% 2) Cabeceras
+% 3) Enlaces y pies de figura
+% 4) Etiquetas visuales de respuesta
+% 5) Ajustes globales
+% 6) Índices y glosario
+%
+% Recomendación:
+% Mantén este archivo cargado en el preámbulo con:
+% \input{comandos}
+%
+% ---------------------------------------------------------
+% 1. CITAS Y NOTAS AL PIE
+% ---------------------------------------------------------
+%
+% Estos comandos ayudan a insertar citas bibliográficas o web
+% en notas al pie de forma uniforme.
+%
+% Requisitos habituales:
+% - biblatex
+% - \fullcite disponible
+%
+% Convención:
+% - #1, #2, #3... representan los parámetros del comando
+%
+
+% \footcitepage{texto citado}{clave_biblatex}{pagina}
+% Sirve para mostrar un fragmento entre comillas y añadir en nota al pie
+% la referencia completa indicando la página concreta.
+%
+% Ejemplo:
+% \footcitepage{La seguridad es esencial}{nist2024}{15}
+%
+% Resultado:
+% “La seguridad es esencial”¹
+% y en la nota al pie: referencia completa, p. 15
+\newcommand{\footcitepage}[3]{%
+  ``#1''\footnote{%
+    \fullcite{#2}, p.~#3%
+  }%
+}
+
+% \footbibliographypage{clave_biblatex}{pagina}
+% Sirve para insertar solo una nota al pie con la referencia completa
+% y la página, sin mostrar texto citado en el cuerpo del documento.
+%
+% Ejemplo:
+% \footbibliographypage{nist2024}{15}
+\newcommand{\footbibliographypage}[2]{%
+  \footnote{%
+    \fullcite{#1}, p.~#2%
+  }%
+}
+
+% \footwebfragment{clave_biblatex}{fragmento}
+% Sirve para citar una fuente web en nota al pie e indicar qué fragmento
+% concreto de esa fuente se está usando.
+%
+% Ejemplo:
+% \footwebfragment{owasp2024}{Se recomienda validar todas las entradas}
+\newcommand{\footwebfragment}[2]{%
+  \footnote{%
+    \fullcite{#1}. Fragmento: #2%
+  }%
+}
+
+% \footweb{clave_biblatex}
+% Sirve para insertar una nota al pie con la referencia completa de una web
+% o cualquier otra fuente, sin añadir fragmento ni página.
+%
+% Ejemplo:
+% \footweb{owasp2024}
+\newcommand{\footweb}[1]{%
+  \footnote{%
+    \fullcite{#1}%
+  }%
+}
+
+% \footwebcite{texto citado}{clave_biblatex}{fragmento}
+% Sirve para mostrar un texto entre comillas en el cuerpo del documento
+% y añadir en nota al pie la fuente web más el fragmento relevante.
+%
+% Ejemplo:
+% \footwebcite{La autenticación multifactor reduce riesgos}{cisa2024}{MFA helps prevent unauthorized access}
+\newcommand{\footwebcite}[3]{%
+  ``#1''\footnote{%
+    \fullcite{#2}. Fragmento: #3%
+  }%
+}
+
+% \footcitedefinition{termino_o_definicion}{clave_biblatex}{pagina}
+% Sirve para escribir un término o definición y añadir la fuente en nota
+% al pie con la página correspondiente.
+%
+% Ejemplo:
+% \footcitedefinition{Confidencialidad}{iso27001}{8}
+\newcommand{\footcitedefinition}[3]{%
+  #1\footnote{%
+    \fullcite{#2}, p.~#3%
+  }%
+}
+
+% ---------------------------------------------------------
+% 2. CABECERAS
+% ---------------------------------------------------------
+%
+% Estos comandos están pensados para usar con fancyhdr.
+% Permiten personalizar el contenido de la cabecera.
+%
+% Posiciones típicas en fancyhdr:
+% - L = izquierda
+% - C = centro
+% - R = derecha
+% - E = página par
+% - O = página impar
+%
+% Ejemplos de posiciones:
+% - LE, RO, RH, LH, etc.
+%
+
+% \nombreCapituloCabecera{posicion}{texto}
+% Sirve para poner un texto en cursiva en una posición concreta
+% de la cabecera.
+%
+% Ejemplo:
+% \nombreCapituloCabecera{RH}{Capítulo 1}
+\newcommand{\nombreCapituloCabecera}[2]{%
+  \fancyhead[#1]{\textit{#2}}%
+}
+
+% \logocabeceraCEU{posicion}{ruta_imagen}
+% Sirve para colocar un logotipo o imagen en la cabecera.
+%
+% Ejemplo:
+% \logocabeceraCEU{LH}{Imagenes/logo-ceu.png}
+%
+% Nota:
+% La altura de la imagen está fijada a 1 cm.
+\newcommand{\logocabeceraCEU}[2]{%
+  \fancyhead[#1]{\includegraphics[height=1cm]{#2}}%
+}
+
+% ---------------------------------------------------------
+% 3. ENLACES, FIGURAS Y ELEMENTOS VISUALES
+% ---------------------------------------------------------
+
+% \enlace{url}{texto_visible}
+% Sirve para crear un hipervínculo con color personalizado y subrayado.
+%
+% Ejemplo:
+% \enlace{https://www.example.com}{Sitio oficial}
+%
+% Requisitos habituales:
+% - hyperref
+% - ulem o un paquete que defina \uline
+% - color/bluelink definido en el documento
+\newcommand{\enlace}[2]{%
+  \href{#1}{\color{bluelink}\uline{#2}}%
+}
+
+% \captionazul{texto_caption}
+% Sirve para crear una caption de figura o tabla con texto en color azul.
+%
+% Ejemplo:
+% \begin{figure}
+%   ...
+%   \captionazul{Arquitectura general del sistema}
+% \end{figure}
+%
+% Nota:
+% También usa el mismo texto para la entrada corta del índice de figuras/tablas.
+\newcommand{\captionazul}[1]{%
+  \caption[#1]{\textcolor{blueColor}{#1}}%
+}
+
+% ---------------------------------------------------------
+% 4. ETIQUETAS VISUALES DE RESPUESTA
+% ---------------------------------------------------------
+%
+% Estos comandos imprimen respuestas cortas en color.
+% Son útiles en tablas comparativas o matrices de decisión.
+%
+
+% \permits
+% Muestra “Sí” en verde.
+%
+% Ejemplo:
+% Acceso de administrador: \permits
+\newcommand{\permits}{\textcolor{green!60!black}{Sí}}
+
+% \denies
+% Muestra “No” en rojo.
+%
+% Ejemplo:
+% Acceso de invitado: \denies
+\newcommand{\denies}{\textcolor{red!70!black}{No}}
+
+% ---------------------------------------------------------
+% 5. AJUSTES GLOBALES
+% ---------------------------------------------------------
+%
+% Estas líneas modifican comportamientos por defecto de paquetes.
+%
+
+% Elimina la línea horizontal de la cabecera definida por fancyhdr.
+\renewcommand{\headrulewidth}{0pt}
+
+% Evita que aparezcan números de página junto a las entradas del glosario.
+% Suele usarse cuando no interesa mostrar en qué páginas aparece cada término.
+\renewcommand*{\glossaryentrynumbers}[1]{}
+
+% ---------------------------------------------------------
+% 6. ÍNDICES Y GLOSARIO
+% ---------------------------------------------------------
+%
+% Estos comandos generan índices y glosario con ajustes de espaciado.
+%
+
+% \crearIndiceTOC
+% Genera el índice general (table of contents).
+%
+% Ejemplo:
+% \crearIndiceTOC
+\newcommand{\crearIndiceTOC}{%
+    \vspace*{-2.5cm}%
+    \tableofcontents%
+}
+
+% \crearIndiceTablas
+% Genera el índice de tablas.
+%
+% Ejemplo:
+% \crearIndiceTablas
+\newcommand{\crearIndiceTablas}{%
+    \vspace*{-2.5cm}%
+    \listoftables%
+}
+
+% \crearIndiceFiguras
+% Genera el índice de figuras.
+%
+% Ejemplo:
+% \crearIndiceFiguras
+\newcommand{\crearIndiceFiguras}{%
+    \vspace*{-2.5cm}%
+    \listoffigures%
+}
+
+% \crearglosario
+% Inserta el glosario de términos, ajusta la cabecera y añade todas
+% las entradas del glosario aunque no hayan sido usadas en el texto.
+%
+% Ejemplo:
+% \crearglosario
+%
+% Nota:
+% Este comando asume que existe el fichero:
+% Glosario/glosario.tex
+\newcommand{\crearglosario}{%
+    \vspace*{-1cm}%
+    \nombreCapituloCabecera{RH}{Glosario de términos}%
+
+    \glsaddall%
+    \vspace*{-2cm}%
+    \input{Glosario/glosario}%
+}
