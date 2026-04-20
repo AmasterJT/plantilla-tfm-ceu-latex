@@ -221,6 +221,15 @@
   }%
 }
 
+\newcommand{\nombreCapituloCabecera}[2]{%
+  \fancyhead[#1]{\textit{#2}}
+}
+
+\newcommand{\logocabeceraCEU}[2]{%
+  \fancyhead[#1]{\includegraphics[height=1cm]{#2}}
+}
+
+
 
 \newcommand{\enlace}[2]{%
     \href{#1}{\color{bluelink}\uline{#2}}%
@@ -325,7 +334,7 @@
 \include{Cuerpo/03_Análisis}
 
 % 4 Análisis del sistema
-\include{Cuerpo/04_Analisis_del_sistema}
+\include{Cuerpo/04_Diseño_e_implementacion}
 
 % 5 Diseño del sistema
 \include{Cuerpo/05_validacion_del_sistema}
@@ -341,12 +350,15 @@
 % =========================================================
 \clearpage
 \vspace*{-1cm}
+
+\nombreCapituloCabecera{RH}{Bibliografía} % Título de la sección en la cabecera
+
 \printbibliography[title={Bibliografía}]
 
 % 9 anexos
-\include{Cuerpo/09_Anexos_I}
+\include{Cuerpo/07_Anexos_I}
 
-\include{Cuerpo/10_Anexos_II}
+\include{Cuerpo/08_Anexos_II}
 
 \clearpage
 \vspace*{-1cm}
