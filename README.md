@@ -387,7 +387,7 @@ Anexos = [
 
 ## 🚀 Guía de Uso
 
-[![Ver demo](Imagenes/README/demo_creacion_tfm.gif)](Imagenes/README/demo_creacion_tfm.mp4)
+[![Ver demo](Imagenes/README/demo_creacion_tfm.mp4)](Imagenes/README/demo_creacion_tfm.mp4)
 
 **1️⃣ Paso 1: Configurar la Portada**
 
