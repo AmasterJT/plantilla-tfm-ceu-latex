@@ -23,37 +23,24 @@ Esta es una solución modular y automatizada diseñada para la redacción de Tra
   - [4. Formatos](#4-formatos)  
 
 - [🧾 Índice del TFM](#-índice-del-tfm)  
-  - [Formatos de índices](#️-formatos-de-indices)  
-  - [Ejemplos de índices](#️-ver-ejemplos-de-formato-de-indices)  
 
 - [💻 Configuración Recomendada (VS Code)](#-configuración-recomendada-vs-code)  
 
 - [🚀 Guía de Uso - Redacción del TFM](#-guía-de-uso---redacción-del-tfm)  
-  - [Paso 0: Crear estructura](#0️⃣-paso-0-creación-de-la-estructura-del-tfm)  
-  - [Paso 1: Configurar portada](#1️⃣-paso-1-configurar-la-portada)  
-  - [Paso 2: Generar índice JSON](#2️⃣-paso-2-definir-el-índice-opcional)  
-  - [Paso 3: Generar capítulos](#3️⃣-paso-3-ejecutar-el-generador)  
 
 - [🎨 Personalizaciones](#-personalizaciones)  
-  - [Cambio de fuentes](#cambio-de-fuentes)  
-  - [Glosario](#gestión-de-glosarios)  
-  - [Código](#estilo-de-código)  
-  - [Cabeceras](#cabeceras-personalizadas) 
 
 - [📘 Buenas prácticas: Figuras, Tablas y Enlaces](#-buenas-prácticas-figuras-tablas-y-enlaces)
-  - [Enlaces](#-uso-de-enlaces)
-  - [Figuras](#️-inserción-de-figuras)
-  - [Tablas](#-inserción-de-tablas)
-
-- [📚 Guía de Figuras, Tablas y Enlaces](#-guía-de-figuras-tablas-y-enlaces)  
-  - [🔗 Enlaces](#-enlaces)  
-  - [🖼️ Figuras](#️-figuras)  
-  - [📊 Tablas](#-tablas)  
+  - [🙍🏼‍♂️ Cabeceras](#️configuración-de-la-cabecera-de-cada-capítulo)
+  - [🔗 Enlaces](#-uso-de-enlaces)  
+  - [🖼️ Figuras](#️-inserción-de-figuras)  
+  - [📊 Tablas](#-inserción-de-tablas)  
 
 - [📚 Citas, Bibliografía y Glosario](#-citas-bibliografía-y-glosario)  
-  - [🔖 Citas y referencias](#-citas-y-referencias)  
-  - [📚 Bibliografía](#-bibliografía-automática)  
-  - [📖 Glosario y siglas](#-glosario-y-siglas)  
+  - [🔖 Citas y referencias](#1--citas-y-referencias)  
+  - [📚 Bibliografía](#-2-bibliografía-automática)  
+  - [📖 Glosario y siglas](#-3-glosario-y-siglass)  
+
 - [⚠️ Notas Importantes](#️-notas-importantes)
 
 ###
@@ -657,7 +644,9 @@ Para insertar código, usa el entorno definido en `listings.tex`:
 ```
 
 
-**Cabeceras Personalizadas**
+## 📘 Buenas prácticas: Figuras, Tablas y Enlaces
+
+### 🙍🏼‍♂️Configuración de la cabecera de cada capítulo
 
 Puedes cambiar el texto de la cabecera en cada capítulo usando el comando:
 
@@ -665,7 +654,7 @@ Puedes cambiar el texto de la cabecera en cada capítulo usando el comando:
 \nombreCapituloCabecera{RH}{Título de la Cabecera}
 ```
 
-## 📘 Buenas prácticas: Figuras, Tablas y Enlaces
+--- 
 
 ### 🔗 Uso de enlaces
 
