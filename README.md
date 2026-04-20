@@ -24,20 +24,22 @@ Esta es una solución modular y automatizada diseñada para la redacción de Tra
 
 ```text
 .
-├── main.tex                   # 🎛️ Orquestador principal (Preámbulo y estructura)
-├── generar_capitulos_latex.py # 🐍 Script de automatización de capítulos
-├── indice.json                # 📋 Definición de la estructura del TFM
-├── Bibliografia/              # 📚 Referencias y estilos (BibLaTeX)
-├── Cuerpo/                    # ✍️ Contenido real (Resumen, Capítulos, Anexos)
-├── Formatos/                  # 🎨 Diseño (Estilos de títulos, cabeceras, código)
-├── Glosario/                  # 📖 Siglas y definiciones de términos
-├── Ficheros CEU/              # 📖 Documentos originales proporcionados por la universidad
-├── Imagenes/                  # 🖼️ Gráficos y figuras del contenido
-├── Logo/                      # 🏫 Logos institucionales (Portada/Cabecera)
-└── Portada/                   # 📄 Configuración de la cubierta
+├── main.tex                       # 🎛️ Orquestador principal (Preámbulo y estructura)
+├── conversor_indice_txt_a_json.py # 🐍 Script que traduce el indice.txt a indice.json
+├── generar_capitulos_latex.py     # 🐍 Script de automatización de capítulos
+├── indice.json                    # 📋 Definición de la estructura del TFM
+├── Bibliografia/                  # 📚 Referencias y estilos (BibLaTeX)
+├── Cuerpo/                        # ✍️ Contenido real (Resumen, Capítulos, Anexos)
+├── Formatos/                      # 🎨 Diseño (Estilos de títulos, cabeceras, código)
+├── Glosario/                      # 📖 Siglas y definiciones de términos
+├── Ficheros CEU/                  # 📖 Documentos originales proporcionados por la universidad
+├── Imagenes/                      # 🖼️ Gráficos y figuras del contenido
+├── Logo/                          # 🏫 Logos institucionales (Portada/Cabecera)
+└── Portada/                       # 📄 Configuración de la cubierta
 ```
 
 ## 🛠️ Archivos Clave
+
 
 ### 1. `main.tex`
 Es el núcleo del proyecto. Aquí se cargan los paquetes, se definen las fuentes (Times New Roman, Arial, Calibri) y se establece el orden de las secciones. No debes escribir contenido aquí, solo gestionar qué archivos se incluyen.
@@ -64,8 +66,22 @@ Un potente script de Python que:
 </p>
 
 
+### 3. `Formatos/`
+- `Cuerpo.tex`: Define cómo se ven las secciones, las cabeceras (`fancyhdr`) y el espaciado. **⚠️ NO TOCAR este fichero**
+
+- `listings.tex`: Configura el resaltado de sintaxis para bloques de código.
+
+- `comandos.tex`: Macros personalizadas para facilitar la escritura.
+
+## 🧾 Índice del TFM
+
+Si bien podemos crear la estructura del proyecto manualmente, contamos con un script `generar_capitulos_latex.py` que genera toda la estructura deseada. Para que funcione este script podemos usar los siguientes formatos
+
+
 <details>
-<summary>⚙️ formatos de indices </summary>
+<summary>⚙️ Formatos de indices</summary>
+
+💠Formato txt
 
 ```text
 Capítulo 1: Nombre del Capítulo
@@ -77,6 +93,8 @@ Capítulo 1: Nombre del Capítulo
 Anexos
   Anexo i: Título del Anexo
 ```
+
+💠Formato json
 
 ```json
 {
@@ -96,6 +114,8 @@ Anexos
 }
 ```
 
+💠Formato yaml
+
 ```yaml
 capitulos:
   - titulo: "Nombre del Capítulo"
@@ -109,6 +129,8 @@ capitulos:
 Anexos:
   - "Título del Anexo"
 ```
+
+💠Formato toml
 
 ```toml
 [[capitulos]]
@@ -128,6 +150,8 @@ Anexos = ["Título del Anexo"]
 
 <details>
 <summary>⚙️ Ver ejemplos de formato de indices </summary>
+
+💠Ejemplo formato txt
 
 ```txt
 Capítulo 1: Introducción
@@ -172,6 +196,8 @@ Anexos
   Anexo ii: Documentación de usuario (si procede)
   Anexo iii: Documentación técnica (si procede)
 ```
+
+💠Ejemplo formato json
 
 ```yaml
 capitulos:
@@ -225,6 +251,8 @@ Anexos:
   - "Anexo ii: Documentación de usuario (si procede)"
   - "Anexo iii: Documentación técnica (si procede)"
 ```
+
+💠Ejemplo formato yaml
 
 ```json
 {
@@ -301,6 +329,8 @@ Anexos:
 }
 ```
 
+💠Ejemplo formato toml
+
 ```toml
 [[capitulos]]
 titulo = "Introducción"
@@ -376,21 +406,14 @@ Anexos = [
 ```
 </details>
 
-
-
-### 3. `Formatos/`
-- `Cuerpo.tex`: Define cómo se ven las secciones, las cabeceras (`fancyhdr`) y el espaciado. **⚠️ NO TOCAR este fichero**
-
-- `listings.tex`: Configura el resaltado de sintaxis para bloques de código.
-
-- `comandos.tex`: Macros personalizadas para facilitar la escritura.
-
-## 🚀 Guía de Uso
-
+## 🚀 Guía de Uso - Redacción del TFM
 
 
 https://github.com/user-attachments/assets/743e800f-8fae-481d-b68d-001b2f3f461d
 
+### 1. Creación del indice
+
+Para redactar el TFM primero debemos definir su estructura, es decir, crear el indice. Para ello podemos usar diferentes formatos como se indica en la seccion [generar_capitulos_latex](#índice-del-tfm)
 
 
 **1️⃣ Paso 1: Configurar la Portada**
