@@ -532,9 +532,9 @@ https://github.com/user-attachments/assets/743e800f-8fae-481d-b68d-001b2f3f461d
 
 **0️⃣ Paso 0. Creación de la estructura del TFM** 
 
-Para redactar el TFM primero debemos definir su estructura, es decir, crear el indice. Para ello podemos usar diferentes formatos como se indica en la seccion [generar_capitulos_latex](#índice-del-tfm)
+Para redactar el TFM primero debemos definir su estructura, es decir, crear el indice. Para ello podemos usar diferentes formatos como se indica en la seccion [_**Índice del TFM**_](#-índice-del-tfm)
 
-Guardamos la estructura creada en `indice.txt` o bien en los demás formatos, en la carpeta del proyecto.
+Guardamos la estructura creada en un fichero `indice.txt`, o bien en los demás formatos, en la carpeta del proyecto.
 
 
 **1️⃣ Paso 1: Configurar la Portada**
