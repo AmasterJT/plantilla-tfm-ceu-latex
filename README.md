@@ -865,6 +865,14 @@ Ejemplo:
 \printbibliography
 ```
 
+
+<p align="center">
+  <img src="Imagenes/README/bibliografia.png" alt="Indices" height="500px"/><br>
+  <em>Figura 6. Ejemplo de bibliografia</em>
+</p>
+
+
+
 ---
 
 ## 📖 3. Glosario y siglas
@@ -930,6 +938,12 @@ El proyecto ya contempla esto y genera automaticamente el glosario en el lugar c
 - Glosario de siglas
 - Definiciones
 - Todas las entradas (aunque no se usen)
+
+
+<p align="center">
+  <img src="Imagenes/README/glosario.PNG" alt="Indices" height="500px"/><br>
+  <em>Figura 7. Ejemplo de bibliografia</em>
+</p>
 
 
 
