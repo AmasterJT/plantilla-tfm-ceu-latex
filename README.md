@@ -91,11 +91,6 @@ Un potente script de Python que:
   <em>Figura 2. Ejemplo de índices</em>
 </p>
 
-<p align="center">
-  <img src="Imagenes/README/capitulo.png" alt="Capitulo ejemplo" /><br>
-  <em>Figura 3. Ejemplo de capítulo</em>
-</p>
-
 
 Si bien podemos crear la estructura del proyecto manualmente, contamos con un script `generar_capitulos_latex.py` que genera toda la estructura deseada. Para que funcione este script podemos usar los siguientes formatos
 
@@ -447,7 +442,8 @@ En `main.tex`, localiza la línea de `\printportada` y rellena tus datos:
 ```
 
 **2️⃣ Paso 2: Definir el Índice**
-Edita `indice.json` (o un archivo `.txt`) con la estructura deseada:
+
+Necesitamos el fichero `indice.json` con la estructura deseada (Si partimos de un fichero `.txt`  _**[ver generador de indice.json](#2-conversor_indice_txt_a_jsonpy)**_):
 
 ```json
 {
@@ -471,6 +467,10 @@ Edita `indice.json` (o un archivo `.txt`) con la estructura deseada:
 
 4. **Anexos:** Se generan con numeración romana (`Anexo i`, `Anexo ii`) y usan `\section*` para no alterar la numeración de los capítulos principales.
 ###
+
+
+
+
 
 **3️⃣ Paso 3: Ejecutar el Generador**
 Abre una terminal y ejecuta:
